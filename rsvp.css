@@ -1,0 +1,251 @@
+/* =========================
+   RSVP HERO
+========================= */
+
+.rsvp-hero {
+    background: #ffffff;
+
+    text-align: center;
+}
+
+
+.rsvp-hero-top {
+    position: relative;
+
+    height: 285px;
+
+    background: #ffffff;
+
+    overflow: visible;
+}
+
+
+.rsvp-hero-photo {
+    width: 100%;
+    height: 350px;
+
+    overflow: hidden;
+}
+
+
+.rsvp-hero-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    /* 컬러 유지 */
+    filter: none;
+}
+
+
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp-section {
+    background: #ffffff;
+}
+
+
+.rsvp-intro {
+    margin: -8px 0 45px;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    color: #686868;
+}
+
+
+#rsvpForm {
+    text-align: left;
+}
+
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+
+.form-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    color: #525252;
+}
+
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px 13px;
+
+    border: 1px solid #dfe4e4;
+
+    border-radius: 0;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #444444;
+
+    font-family:
+        "Nanum Myeongjo",
+        serif;
+
+    font-size: 14px;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #aebfc2;
+}
+
+
+
+/* 참석 여부 */
+
+.attendance-options {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 8px;
+}
+
+
+.radio-card {
+    position: relative;
+
+    cursor: pointer;
+}
+
+
+.radio-card input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.radio-card span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+
+    padding: 12px;
+
+    border: 1px solid #dce3e4;
+
+    color: #626262;
+
+    font-size: 13px;
+
+    text-align: center;
+
+    transition:
+        border 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.radio-card input:checked + span {
+    border-color: #9fb7bb;
+
+    background: #f1f6f6;
+
+    color: #43595d;
+}
+
+
+
+/* Submit */
+
+.submit-rsvp {
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 16px;
+
+    border: 1px solid #aebfc2;
+
+    background: #ffffff;
+
+    color: #526b6f;
+
+    font-family:
+        "Nanum Myeongjo",
+        serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+.submit-rsvp:hover {
+    background: #eff4f5;
+}
+
+
+.rsvp-result {
+    display: none;
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #577075;
+}
+
+
+
+/* RSVP LOCATION */
+
+.rsvp-location {
+    background: #fafafa;
+}
+
+
+.rsvp-location > p:last-child {
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    color: #666666;
+}

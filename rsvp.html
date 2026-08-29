@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RSVP | 문태윤 & 김민영</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rsvp.css">
+</head>
+
+<body>
+
+<main class="invitation">
+
+
+    <!-- RSVP HERO -->
+
+    <section class="rsvp-hero">
+
+        <div class="rsvp-hero-top">
+
+            <div class="save-date-card">
+
+                <p class="save-title">
+                    SAVE
+                    <span>the</span>
+                    DATE
+                </p>
+
+                <div class="save-line"></div>
+
+                <p class="save-names">
+                    문태윤<br>
+                    김민영
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="rsvp-hero-photo">
+
+            <img
+                src="images/main.jpg"
+                alt="문태윤 김민영 웨딩 사진"
+            >
+
+        </div>
+
+
+        <div class="hero-date">
+
+            <p>
+                2027. 02. 13 SAT
+            </p>
+
+            <span></span>
+
+            <p>
+                4:30 PM
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- RSVP FORM -->
+
+    <section class="section rsvp-section">
+
+        <p class="section-label">
+            RSVP
+        </p>
+
+        <div class="section-line"></div>
+
+        <h2>
+            참석 여부를 알려주세요
+        </h2>
+
+
+        <p class="rsvp-intro">
+            소중한 날 함께해 주실 수 있는지<br>
+            아래 내용을 작성해 주세요.
+        </p>
+
+
+        <form id="rsvpForm">
+
+
+            <!-- ATTENDANCE -->
+
+            <div class="form-group">
+
+                <label class="form-label">
+                    참석 여부
+                </label>
+
+                <div class="attendance-options">
+
+                    <label class="radio-card">
+
+                        <input
+                            type="radio"
+                            name="attendance"
+                            value="attending"
+                            required
+                        >
+
+                        <span>
+                            참석합니다
+                        </span>
+
+                    </label>
+
+
+                    <label class="radio-card">
+
+                        <input
+                            type="radio"
+                            name="attendance"
+                            value="not-attending"
+                        >
+
+                        <span>
+                            참석이 어렵습니다
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+                <label
+                    class="form-label"
+                    for="guestName"
+                >
+                    성함
+                </label>
+
+                <input
+                    id="guestName"
+                    name="guestName"
+                    type="text"
+                    placeholder="성함을 입력해 주세요"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div class="form-group">
+
+                <label
+                    class="form-label"
+                    for="phone"
+                >
+                    연락처
+                </label>
+
+                <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="전화번호"
+                >
+
+            </div>
+
+
+
+            <!-- GUEST COUNT -->
+
+            <div class="form-group">
+
+                <label
+                    class="form-label"
+                    for="guestCount"
+                >
+                    참석 인원
+                </label>
+
+                <select
+                    id="guestCount"
+                    name="guestCount"
+                >
+
+                    <option value="1">
+                        1명
+                    </option>
+
+                    <option value="2">
+                        2명
+                    </option>
+
+                    <option value="3">
+                        3명
+                    </option>
+
+                    <option value="4">
+                        4명
+                    </option>
+
+                    <option value="5">
+                        5명 이상
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- MESSAGE -->
+
+            <div class="form-group">
+
+                <label
+                    class="form-label"
+                    for="message"
+                >
+                    메시지
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="전하고 싶은 말씀이나 요청사항이 있다면 적어 주세요."
+                ></textarea>
+
+            </div>
+
+
+
+            <button
+                type="submit"
+                class="submit-rsvp"
+            >
+                Submit RSVP
+            </button>
+
+
+            <p
+                id="rsvpResult"
+                class="rsvp-result"
+            ></p>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- LOCATION -->
+
+    <section class="section rsvp-location">
+
+        <p class="section-label">
+            WEDDING DAY
+        </p>
+
+        <div class="section-line"></div>
+
+        <h2>
+            Chateau 1800
+        </h2>
+
+        <p>
+            2027년 2월 13일 토요일<br>
+            오후 4시 30분
+            <br><br>
+            1800 McCall Rd<br>
+            Rincon, GA 31326
+        </p>
+
+    </section>
+
+
+
+    <section class="closing">
+
+        <p class="closing-label">
+            THANK YOU
+        </p>
+
+        <div class="section-line"></div>
+
+        <p class="closing-message">
+            저희의 소중한 날을<br>
+            함께해 주셔서 감사합니다.
+        </p>
+
+        <strong>
+            문태윤 & 김민영
+        </strong>
+
+    </section>
+
+
+</main>
+
+
+<script src="rsvp.js"></script>
+
+</body>
+
+</html>

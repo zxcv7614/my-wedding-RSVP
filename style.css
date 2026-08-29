@@ -770,3 +770,48 @@ button {
     }
 
 }
+/* =========================
+   RSVP LINK
+========================= */
+
+.rsvp-link-section {
+    background: #fafafa;
+}
+
+.rsvp-link-message {
+    margin: -8px 0 30px;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    color: #656565;
+}
+
+.rsvp-button {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    border: 1px solid #b9cacd;
+
+    background: #ffffff;
+
+    color: #5f777b;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.rsvp-button:hover {
+    background: #eef4f5;
+
+    color: #3f5559;
+}

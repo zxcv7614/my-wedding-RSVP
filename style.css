@@ -1020,3 +1020,291 @@ button {
         transform: translateY(0);
     }
 }
+/* =========================
+   RSVP FORM DESIGN
+========================= */
+
+#rsvpForm {
+    width: 100%;
+    max-width: 380px;
+
+    margin: 0 auto;
+
+    padding: 30px 24px;
+
+    border: 1px solid #d2e3e7;
+
+    background:
+        rgba(255, 255, 255, 0.55);
+
+    text-align: left;
+}
+
+
+/* 각 항목 */
+
+.rsvp-field {
+    margin-bottom: 26px;
+}
+
+
+/* 질문 / 라벨 */
+
+.rsvp-field > label,
+.rsvp-question {
+    display: block;
+
+    margin: 0 0 10px;
+
+    font-family:
+        "Nanum Myeongjo",
+        serif;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    color: #5e7176;
+}
+
+.rsvp-question {
+    margin-bottom: 13px;
+}
+
+
+/* =========================
+   TEXT INPUT / SELECT / TEXTAREA
+========================= */
+
+.rsvp-field input[type="text"],
+.rsvp-field input[type="tel"],
+.rsvp-field select,
+.rsvp-field textarea {
+    display: block;
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #cbdfe4;
+
+    border-radius: 0;
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    color: #454545;
+
+    font-family:
+        "Nanum Myeongjo",
+        serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+
+.rsvp-field input[type="text"],
+.rsvp-field input[type="tel"],
+.rsvp-field select {
+    height: 48px;
+}
+
+
+.rsvp-field textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+
+/* 포커스 */
+
+.rsvp-field input:focus,
+.rsvp-field select:focus,
+.rsvp-field textarea:focus {
+    border-color: #8fb9c3;
+}
+
+
+/* =========================
+   ATTENDANCE BUTTONS
+========================= */
+
+.rsvp-field:first-child {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    column-gap: 10px;
+}
+
+
+/* 질문은 두 칸 전체 사용 */
+
+.rsvp-field:first-child .rsvp-question {
+    grid-column: 1 / -1;
+}
+
+
+.radio-option {
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+
+/* 실제 radio 숨김 */
+
+.radio-option input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* 참석 버튼 디자인 */
+
+.radio-option span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 10px 8px;
+
+    border: 1px solid #cbdfe4;
+
+    background:
+        rgba(255, 255, 255, 0.7);
+
+    color: #697a7e;
+
+    font-family:
+        "Nanum Myeongjo",
+        serif;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* 선택됐을 때 */
+
+.radio-option input:checked + span {
+    border-color: #8fb9c3;
+
+    background: #8fb9c3;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.submit-rsvp {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 15px;
+
+    border: 1px solid #8fb9c3;
+
+    background: #8fb9c3;
+
+    color: #ffffff;
+
+    font-family:
+        "Nanum Myeongjo",
+        serif;
+
+    font-size: 13px;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.2s ease;
+}
+
+
+.submit-rsvp:hover {
+    opacity: 0.88;
+}
+
+
+.submit-rsvp:disabled {
+    opacity: 0.55;
+
+    cursor: default;
+}
+
+
+/* =========================
+   RESULT MESSAGE
+========================= */
+
+.rsvp-result {
+    display: none;
+
+    margin: 24px 0 0;
+
+    text-align: center;
+
+    font-family:
+        "Nanum Myeongjo",
+        serif;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #668c95;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    #rsvpForm {
+        padding: 26px 18px;
+    }
+
+    .radio-option span {
+        font-size: 11px;
+    }
+}

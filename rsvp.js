@@ -1,169 +1,431 @@
 document.addEventListener(
-  "DOMContentLoaded",
-  function () {
+    "DOMContentLoaded",
+    function () {
 
-    const form =
-      document.getElementById("rsvpForm");
+        /* ========================================
+           GALLERY PHOTO MODAL
+        ======================================== */
 
-    const result =
-      document.getElementById("rsvpResult");
+        const galleryItems =
+            document.querySelectorAll(
+                ".gallery-item"
+            );
 
-    const submitButton =
-      document.querySelector(".submit-rsvp");
+        const modal =
+            document.getElementById(
+                "photoModal"
+            );
 
+        const modalImage =
+            document.getElementById(
+                "modalImage"
+            );
 
-    /*
-     * 여기에 Google Apps Script
-     * Web App URL을 넣으세요.
-     */
-    const GOOGLE_SCRIPT_URL =
-      "https://script.google.com/macros/s/AKfycbxOAEG8e_RJ9pBZzBoLFGXCVerv8zOzmT-6JSzWz7IKjWwDLVYMNh9NQXrZ78Y3n4I3MA/exec";
-
-
-    if (!form) {
-      return;
-    }
-
-
-    form.addEventListener(
-      "submit",
-      async function (event) {
-
-        event.preventDefault();
+        const closeButton =
+            document.querySelector(
+                ".close-button"
+            );
 
 
-        const formData =
-          new FormData(form);
+        /* ========================================
+           OPEN PHOTO
+        ======================================== */
 
+        galleryItems.forEach(
+            function (item) {
 
-        const data = {
+                item.addEventListener(
+                    "click",
+                    function () {
 
-          attendance:
-            formData.get("attendance"),
+                        const photo =
+                            item.querySelector(
+                                "img"
+                            );
 
-          guestName:
-            formData.get("guestName"),
+                        if (
+                            !photo ||
+                            !modal ||
+                            !modalImage
+                        ) {
+                            return;
+                        }
 
-          phone:
-            formData.get("phone"),
+                        modalImage.src =
+                            photo.src;
 
-          guestCount:
-            formData.get("guestCount"),
+                        modal.classList.add(
+                            "active"
+                        );
 
-          message:
-            formData.get("message")
+                        modal.setAttribute(
+                            "aria-hidden",
+                            "false"
+                        );
 
-        };
-
-
-        /*
-         * 버튼 중복 클릭 방지
-         */
-
-        if (submitButton) {
-
-          submitButton.disabled = true;
-
-          submitButton.textContent =
-            "Submitting...";
-
-        }
-
-
-        if (result) {
-
-          result.style.display =
-            "none";
-
-        }
-
-
-        try {
-
-          await fetch(
-            GOOGLE_SCRIPT_URL,
-            {
-              method: "POST",
-
-              /*
-               * Apps Script와 브라우저 간
-               * CORS 문제를 피하기 위해
-               * text/plain으로 전송합니다.
-               */
-              headers: {
-                "Content-Type":
-                  "text/plain;charset=utf-8"
-              },
-
-              body:
-                JSON.stringify(data)
+                        document.body.style.overflow =
+                            "hidden";
+                    }
+                );
             }
-          );
+        );
 
 
-          if (result) {
+        /* ========================================
+           CLOSE PHOTO
+        ======================================== */
 
-            if (
-              data.attendance ===
-              "attending"
-            ) {
+        function closePhoto() {
 
-              result.textContent =
-                data.guestName +
-                "님, RSVP가 제출되었습니다. 함께해 주셔서 감사합니다 ♡";
+            if (!modal) {
+                return;
+            }
+
+            modal.classList.remove(
+                "active"
+            );
+
+            modal.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            if (modalImage) {
+                modalImage.src = "";
+            }
+
+            document.body.style.overflow =
+                "";
+        }
+
+
+        /* X BUTTON */
+
+        if (closeButton) {
+
+            closeButton.addEventListener(
+                "click",
+                function (event) {
+
+                    event.stopPropagation();
+
+                    closePhoto();
+                }
+            );
+        }
+
+
+        /* CLICK BACKGROUND */
+
+        if (modal) {
+
+            modal.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        event.target === modal
+                    ) {
+                        closePhoto();
+                    }
+                }
+            );
+        }
+
+
+        /* ESC KEY */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape" &&
+                    modal &&
+                    modal.classList.contains(
+                        "active"
+                    )
+                ) {
+                    closePhoto();
+                }
+            }
+        );
+
+
+        /* ========================================
+           WEDDING COUNTDOWN
+        ======================================== */
+
+        const weddingDate =
+            new Date(
+                2027,
+                1,
+                13
+            );
+
+        const today =
+            new Date();
+
+
+        /* 시간 제거 후 날짜만 비교 */
+
+        today.setHours(
+            0,
+            0,
+            0,
+            0
+        );
+
+        weddingDate.setHours(
+            0,
+            0,
+            0,
+            0
+        );
+
+
+        const difference =
+            weddingDate.getTime() -
+            today.getTime();
+
+
+        const daysLeft =
+            Math.ceil(
+                difference /
+                (
+                    1000 *
+                    60 *
+                    60 *
+                    24
+                )
+            );
+
+
+        const weddingCountdown =
+            document.getElementById(
+                "weddingCountdown"
+            );
+
+
+        if (weddingCountdown) {
+
+            if (daysLeft > 0) {
+
+                weddingCountdown.innerHTML =
+                    "태윤과 민영의 결혼식이 " +
+                    "<strong>" +
+                    daysLeft +
+                    "</strong>일 남았습니다.";
+
+            } else if (daysLeft === 0) {
+
+                weddingCountdown.innerHTML =
+                    "오늘은 태윤과 민영의 결혼식 날입니다. ♡";
 
             } else {
 
-              result.textContent =
-                data.guestName +
-                "님, 답변해 주셔서 감사합니다.";
-
+                weddingCountdown.innerHTML =
+                    "태윤과 민영의 결혼식이 있었습니다. ♡";
             }
-
-
-            result.style.display =
-              "block";
-
-          }
-
-
-          form.reset();
-
-
-        } catch (error) {
-
-          console.error(
-            "RSVP submission error:",
-            error
-          );
-
-
-          if (result) {
-
-            result.textContent =
-              "제출 중 문제가 발생했습니다. 잠시 후 다시 시도해 주세요.";
-
-            result.style.display =
-              "block";
-
-          }
-
-        } finally {
-
-          if (submitButton) {
-
-            submitButton.disabled =
-              false;
-
-            submitButton.textContent =
-              "Submit RSVP";
-
-          }
-
         }
 
-      }
-    );
 
-  }
+        /* ========================================
+           RSVP FORM
+        ======================================== */
+
+        const form =
+            document.getElementById(
+                "rsvpForm"
+            );
+
+        const result =
+            document.getElementById(
+                "rsvpResult"
+            );
+
+        const submitButton =
+            document.querySelector(
+                ".submit-rsvp"
+            );
+
+
+        /* ========================================
+           GOOGLE SHEETS URL
+        ======================================== */
+
+        const GOOGLE_SCRIPT_URL =
+            "https://script.google.com/macros/s/AKfycbxOAEG8e_RJ9pBZzBoLFGXCVerv8zOzmT-6JSzWz7IKjWwDLVYMNh9NQXrZ78Y3n4I3MA/exec";
+
+
+        if (!form) {
+            return;
+        }
+
+
+        /* ========================================
+           RSVP SUBMIT
+        ======================================== */
+
+        form.addEventListener(
+            "submit",
+            async function (event) {
+
+                event.preventDefault();
+
+
+                const formData =
+                    new FormData(form);
+
+
+                const data = {
+
+                    attendance:
+                        formData.get(
+                            "attendance"
+                        ),
+
+                    guestName:
+                        formData.get(
+                            "guestName"
+                        ),
+
+                    phone:
+                        formData.get(
+                            "phone"
+                        ),
+
+                    guestCount:
+                        formData.get(
+                            "guestCount"
+                        ),
+
+                    message:
+                        formData.get(
+                            "message"
+                        )
+                };
+
+
+                /* ========================================
+                   SUBMIT BUTTON
+                ======================================== */
+
+                if (submitButton) {
+
+                    submitButton.disabled =
+                        true;
+
+                    submitButton.textContent =
+                        "Submitting...";
+                }
+
+
+                if (result) {
+
+                    result.style.display =
+                        "none";
+                }
+
+
+                /* ========================================
+                   SEND TO GOOGLE SHEETS
+                ======================================== */
+
+                try {
+
+                    await fetch(
+                        GOOGLE_SCRIPT_URL,
+                        {
+                            method:
+                                "POST",
+
+                            headers: {
+
+                                "Content-Type":
+                                    "text/plain;charset=utf-8"
+                            },
+
+                            body:
+                                JSON.stringify(
+                                    data
+                                )
+                        }
+                    );
+
+
+                    /* ========================================
+                       SUCCESS MESSAGE
+                    ======================================== */
+
+                    if (result) {
+
+                        if (
+                            data.attendance ===
+                            "attending"
+                        ) {
+
+                            result.textContent =
+                                data.guestName +
+                                "님, RSVP가 제출되었습니다. " +
+                                "함께해 주셔서 감사합니다 ♡";
+
+                        } else {
+
+                            result.textContent =
+                                data.guestName +
+                                "님, 답변해 주셔서 감사합니다.";
+                        }
+
+
+                        result.style.display =
+                            "block";
+                    }
+
+
+                    /* 입력창 초기화 */
+
+                    form.reset();
+
+
+                } catch (error) {
+
+                    console.error(
+                        "RSVP submission error:",
+                        error
+                    );
+
+
+                    /* ========================================
+                       ERROR MESSAGE
+                    ======================================== */
+
+                    if (result) {
+
+                        result.textContent =
+                            "제출 중 문제가 발생했습니다. " +
+                            "잠시 후 다시 시도해 주세요.";
+
+                        result.style.display =
+                            "block";
+                    }
+
+
+                } finally {
+
+                    /* 제출 버튼 다시 활성화 */
+
+                    if (submitButton) {
+
+                        submitButton.disabled =
+                            false;
+
+                        submitButton.textContent =
+                            "Submit RSVP";
+                    }
+                }
+            }
+        );
+
+    }
 );

@@ -1,47 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Nanum+Myeongjo:wght@400;700&family=Playfair+Display:wght@400;500&display=swap');
+
+
 /* =========================
-   RSVP HERO
+   BASE
 ========================= */
 
-.rsvp-hero {
-    background: #ffffff;
-
-    text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-
-.rsvp-hero-top {
-    position: relative;
-
-    height: 285px;
-
-    background: #ffffff;
-
-    overflow: visible;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    margin: 0;
+    background: #e8f3f6;
+    color: #383838;
+    font-family: "Nanum Myeongjo", serif;
+}
 
-.rsvp-hero-photo {
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.invitation {
     width: 100%;
-    height: 350px;
-
+    max-width: 480px;
+    margin: 0 auto;
+    background: #f1f8fa;
     overflow: hidden;
 }
 
 
-.rsvp-hero-photo img {
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    background: #f1f8fa;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-header {
+    width: 100%;
+    padding: 92px 20px 48px;
+    background: #f1f8fa;
+    text-align: center;
+}
+
+.wedding-title-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-top: 1px solid #8fbfca;
+    border-bottom: 1px solid #8fbfca;
+}
+
+.wedding-title-box span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-left: 1px solid #afd2da;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: #50575a;
+}
+
+.wedding-title-box span:last-child {
+    border-right: 1px solid #afd2da;
+}
+
+.hero-names {
+    margin: 27px 0 0;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #4c4c4c;
+    white-space: nowrap;
+}
+
+.hero-heart {
+    display: inline-block;
+    margin: 0 9px;
+    font-size: 11px;
+    color: #82b9c6;
+    vertical-align: 1px;
+}
+
+.hero-photo {
+    position: relative;
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+    background: #eeeeee;
+}
+
+.hero-photo img {
+    display: block;
     width: 100%;
     height: 100%;
-
-    display: block;
-
     object-fit: cover;
-
-    object-position: center;
-
-    /* 컬러 유지 */
+    object-position: center 45%;
     filter: none;
 }
 
+.hero-bottom {
+    width: 100%;
+    padding: 35px 20px 48px;
+    background: #f1f8fa;
+}
+
+.hero-date-text {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    color: #555555;
+}
+
+.hero-time-text {
+    margin: 8px 0 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 13px;
+    letter-spacing: 1.4px;
+    color: #777777;
+}
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.section {
+    padding: 95px 32px;
+    text-align: center;
+}
+
+.section-label {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: #78aebb;
+}
+
+.section-line {
+    width: 25px;
+    height: 1px;
+    margin: 15px auto 0;
+    background: #a9cdd5;
+}
+
+.section h2 {
+    margin: 28px 0 38px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #424242;
+}
+
+
+/* =========================
+   INVITATION
+========================= */
+
+.invitation-section {
+    background: #f7fbfc;
+}
+
+.message {
+    margin: 0;
+    font-size: 15px;
+    line-height: 2.25;
+    color: #606060;
+    word-break: keep-all;
+}
+
+.family-name {
+    font-size: 13px;
+    color: #7d8f93;
+    letter-spacing: 0.5px;
+    line-height: 2;
+}
+
+.family-name strong {
+    font-weight: 700;
+    color: #617a80;
+}
+
+.heart {
+    margin-top: 38px;
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    color: #82b9c6;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    background: #f7fbfc;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: #eeeeee;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   WEDDING DAY
+========================= */
+
+.wedding-section {
+    background: #f1f8fa;
+}
+
+.wedding-calendar {
+    width: 100%;
+    max-width: 360px;
+    margin: 42px auto 38px;
+    padding: 24px 16px 20px;
+    border: 1px solid #c6dde3;
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding-bottom: 13px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #dce6e8;
+    text-align: center;
+}
+
+.calendar-weekdays span {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 9px;
+    letter-spacing: 0.7px;
+    color: #999999;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar-days span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 13px;
+    color: #555555;
+    border-bottom: 1px solid #f0f2f2;
+}
+
+.calendar-days span:nth-last-child(-n+7) {
+    border-bottom: none;
+}
+
+.calendar-days .empty {
+    color: transparent;
+}
+
+.calendar-days .wedding-date {
+    color: #568b97;
+    font-weight: 500;
+}
+
+.calendar-days .wedding-date::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #82b5c1;
+    border-radius: 50%;
+}
+
+.calendar-days .wedding-date::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #82b5c1;
+}
+
+.calendar-event {
+    margin-top: 34px;
+    text-align: center;
+}
+
+.calendar-event-date {
+    margin: 0 0 11px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    color: #868686;
+}
+
+.calendar-event-time {
+    margin: 0;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 21px;
+    letter-spacing: 1px;
+    color: #444444;
+}
+
+.wedding-countdown {
+    margin: 35px 0 0;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #66777b;
+}
+
+.wedding-countdown strong {
+    margin: 0 3px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: #6d9eaa;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.location-section {
+    background: #f7fbfc;
+}
+
+.venue-name {
+    margin: 0 0 14px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 19px;
+    color: #4d5e62;
+}
+
+.venue-address {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #777777;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 13px 25px;
+    border: 1px solid #a8cbd3;
+    text-decoration: none;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 1.3px;
+    color: #5f8e99;
+    background: rgba(255, 255, 255, 0.45);
+}
 
 
 /* =========================
@@ -49,203 +412,299 @@
 ========================= */
 
 .rsvp-section {
-    background: #ffffff;
+    background: #f1f8fa;
 }
 
-
-.rsvp-intro {
-    margin: -8px 0 45px;
-
-    font-size: 15px;
-
+.rsvp-guide {
+    margin: -8px auto 38px;
+    font-size: 13px;
     line-height: 2;
-
-    color: #686868;
+    color: #78898d;
+    word-break: keep-all;
 }
 
-
-#rsvpForm {
+.rsvp-form {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
     text-align: left;
 }
 
-
 .form-group {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
 }
-
 
 .form-label {
     display: block;
-
-    margin-bottom: 10px;
-
-    font-size: 14px;
-
-    color: #525252;
+    margin: 0 0 10px;
+    font-size: 13px;
+    color: #60767b;
 }
 
-
-.form-group input[type="text"],
-.form-group input[type="tel"],
-.form-group select,
-.form-group textarea {
+.rsvp-form input[type="text"],
+.rsvp-form input[type="tel"],
+.rsvp-form select,
+.rsvp-form textarea {
     width: 100%;
-
-    padding: 14px 13px;
-
-    border: 1px solid #dfe4e4;
-
+    padding: 14px 15px;
+    border: 1px solid #cfe0e4;
     border-radius: 0;
-
     outline: none;
-
-    background: #ffffff;
-
-    color: #444444;
-
-    font-family:
-        "Nanum Myeongjo",
-        serif;
-
+    background: rgba(255, 255, 255, 0.62);
+    color: #4e4e4e;
     font-size: 14px;
 }
 
+.rsvp-form input:focus,
+.rsvp-form select:focus,
+.rsvp-form textarea:focus {
+    border-color: #8fbfca;
+}
 
-.form-group textarea {
+.rsvp-form textarea {
     resize: vertical;
 }
 
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: #aebfc2;
-}
-
-
-
-/* 참석 여부 */
-
-.attendance-options {
+.radio-group {
     display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
+    grid-template-columns: 1fr 1fr;
     gap: 8px;
 }
 
-
-.radio-card {
-    position: relative;
-
+.radio-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 10px;
+    border: 1px solid #cfe0e4;
+    background: rgba(255, 255, 255, 0.55);
     cursor: pointer;
 }
 
-
-.radio-card input {
-    position: absolute;
-
-    opacity: 0;
-
-    pointer-events: none;
+.radio-option input {
+    margin: 0 7px 0 0;
+    accent-color: #7cabb6;
 }
 
-
-.radio-card span {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-height: 50px;
-
-    padding: 12px;
-
-    border: 1px solid #dce3e4;
-
-    color: #626262;
-
+.radio-option span {
     font-size: 13px;
-
-    text-align: center;
-
-    transition:
-        border 0.2s ease,
-        background 0.2s ease,
-        color 0.2s ease;
+    color: #59696d;
 }
-
-
-.radio-card input:checked + span {
-    border-color: #9fb7bb;
-
-    background: #f1f6f6;
-
-    color: #43595d;
-}
-
-
-
-/* Submit */
 
 .submit-rsvp {
     width: 100%;
+    min-height: 51px;
+    margin-top: 7px;
+    border: 1px solid #8fb9c3;
+    background: #8fb9c3;
+    color: #ffffff;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
 
-    margin-top: 5px;
+.submit-rsvp:disabled {
+    opacity: 0.65;
+    cursor: default;
+}
 
-    padding: 16px;
+.rsvp-result {
+    display: none;
+    margin: 23px 0 0;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #5d777d;
+}
 
-    border: 1px solid #aebfc2;
 
-    background: #ffffff;
+/* =========================
+   ACCOUNT
+========================= */
 
-    color: #526b6f;
+.account-section {
+    background: #f7fbfc;
+}
 
-    font-family:
-        "Nanum Myeongjo",
-        serif;
+.account-note {
+    max-width: 390px;
+    margin: -8px auto 38px;
+    font-size: 13px;
+    line-height: 2;
+    color: #78898d;
+    word-break: keep-all;
+}
 
-    font-size: 14px;
+.account-box {
+    margin-bottom: 12px;
+    padding: 22px 20px;
+    border: 1px solid #d4e5e9;
+    background: rgba(255, 255, 255, 0.55);
+    text-align: left;
+}
 
+.account-box:last-child {
+    margin-bottom: 0;
+}
+
+.account-title {
+    margin: 0 0 11px;
+    font-size: 15px;
+    color: #689ba7;
+}
+
+.account-info {
+    margin: 0;
+    font-size: 13px;
+    line-height: 2;
+    color: #666666;
+    word-break: break-word;
+}
+
+
+/* =========================
+   CLOSING
+========================= */
+
+.closing {
+    padding: 100px 30px;
+    background: #f1f8fa;
+    text-align: center;
+}
+
+.closing-label {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #78aebb;
+}
+
+.closing-message {
+    margin: 30px 0 0;
+    font-size: 15px;
+    line-height: 2.1;
+    color: #646464;
+}
+
+.closing-heart {
+    margin-top: 25px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #82b9c6;
+}
+
+.closing strong {
+    display: block;
+    margin-top: 22px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #484848;
+}
+
+
+/* =========================
+   PHOTO MODAL
+========================= */
+
+.photo-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 15, 15, 0.94);
+}
+
+.photo-modal.active {
+    display: flex;
+}
+
+.photo-modal img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 95vw;
+    max-height: 88vh;
+    object-fit: contain;
+}
+
+.close-button {
+    position: absolute;
+    top: 14px;
+    right: 17px;
+    z-index: 1000000;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 200;
     cursor: pointer;
 }
 
 
-.submit-rsvp:hover {
-    background: #eff4f5;
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .hero-header {
+        padding: 82px 20px 43px;
+    }
+
+    .hero-photo {
+        height: 410px;
+    }
+
+    .hero-bottom {
+        padding: 32px 20px 43px;
+    }
+
+    .section {
+        padding: 88px 26px;
+    }
+
+    .section h2 {
+        font-size: 22px;
+    }
+
+    .wedding-calendar {
+        padding: 21px 12px 17px;
+    }
+
+    .calendar-days span {
+        height: 42px;
+    }
+
+    .radio-group {
+        grid-template-columns: 1fr;
+    }
 }
 
 
-.rsvp-result {
-    display: none;
+/* =========================
+   DESKTOP
+========================= */
 
-    margin-top: 25px;
+@media (min-width: 481px) {
 
-    text-align: center;
+    body {
+        padding: 30px 0;
+    }
 
-    font-size: 14px;
-
-    line-height: 1.8;
-
-    color: #577075;
-}
-
-
-
-/* RSVP LOCATION */
-
-.rsvp-location {
-    background: #fafafa;
-}
-
-
-.rsvp-location > p:last-child {
-    margin: 0;
-
-    font-size: 14px;
-
-    line-height: 2;
-
-    color: #666666;
+    .invitation {
+        box-shadow:
+            0 8px 35px
+            rgba(0, 0, 0, 0.06);
+    }
 }

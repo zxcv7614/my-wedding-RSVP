@@ -994,3 +994,29 @@ button {
             rgba(0, 0, 0, 0.06);
     }
 }
+/* =========================
+   RSVP OPEN / CLOSE
+========================= */
+
+.rsvp-form-wrapper {
+    display: none;
+    width: 100%;
+    margin-top: 42px;
+}
+
+.rsvp-form-wrapper.active {
+    display: block;
+    animation: rsvpOpen 0.35s ease forwards;
+}
+
+@keyframes rsvpOpen {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

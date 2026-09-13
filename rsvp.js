@@ -167,8 +167,6 @@ document.addEventListener(
             new Date();
 
 
-        /* 시간 제거 후 날짜만 비교 */
-
         today.setHours(
             0,
             0,
@@ -231,6 +229,66 @@ document.addEventListener(
 
 
         /* ========================================
+           RSVP OPEN / CLOSE
+        ======================================== */
+
+        const openRsvpButton =
+            document.getElementById(
+                "openRsvpButton"
+            );
+
+        const rsvpFormWrapper =
+            document.getElementById(
+                "rsvpFormWrapper"
+            );
+
+
+        if (
+            openRsvpButton &&
+            rsvpFormWrapper
+        ) {
+
+            openRsvpButton.addEventListener(
+                "click",
+                function () {
+
+                    const isOpen =
+                        rsvpFormWrapper
+                            .classList
+                            .contains(
+                                "active"
+                            );
+
+
+                    if (isOpen) {
+
+                        rsvpFormWrapper
+                            .classList
+                            .remove(
+                                "active"
+                            );
+
+                        openRsvpButton.textContent =
+                            "RSVP 작성하기";
+
+                    } else {
+
+                        rsvpFormWrapper
+                            .classList
+                            .add(
+                                "active"
+                            );
+
+                        openRsvpButton.textContent =
+                            "RSVP 닫기";
+                    }
+
+                }
+            );
+        }
+
+
+        /* ========================================
            RSVP FORM
         ======================================== */
 
@@ -275,7 +333,9 @@ document.addEventListener(
 
 
                 const formData =
-                    new FormData(form);
+                    new FormData(
+                        form
+                    );
 
 
                 const data = {
@@ -305,6 +365,55 @@ document.addEventListener(
                             "message"
                         )
                 };
+
+
+                /* ========================================
+                   VALIDATION
+                ======================================== */
+
+                if (!data.attendance) {
+
+                    if (result) {
+
+                        result.textContent =
+                            "참석 여부를 선택해 주세요.";
+
+                        result.style.display =
+                            "block";
+                    }
+
+                    return;
+                }
+
+
+                if (!data.guestName) {
+
+                    if (result) {
+
+                        result.textContent =
+                            "성함을 입력해 주세요.";
+
+                        result.style.display =
+                            "block";
+                    }
+
+                    return;
+                }
+
+
+                if (!data.phone) {
+
+                    if (result) {
+
+                        result.textContent =
+                            "연락처를 입력해 주세요.";
+
+                        result.style.display =
+                            "block";
+                    }
+
+                    return;
+                }
 
 
                 /* ========================================
@@ -426,7 +535,6 @@ document.addEventListener(
                 }
             }
         );
-        
 
     }
 );

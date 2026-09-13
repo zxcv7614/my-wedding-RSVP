@@ -426,6 +426,52 @@ document.addEventListener(
                 }
             }
         );
+        const openRsvpButton =
+    document.getElementById(
+        "openRsvpButton"
+    );
+
+const rsvpFormWrapper =
+    document.getElementById(
+        "rsvpFormWrapper"
+    );
+
+if (
+    openRsvpButton &&
+    rsvpFormWrapper
+) {
+
+    openRsvpButton.addEventListener(
+        "click",
+        function () {
+
+            const isOpen =
+                rsvpFormWrapper
+                    .classList
+                    .contains("active");
+
+
+            if (isOpen) {
+
+                rsvpFormWrapper.classList.remove(
+                    "active"
+                );
+
+                openRsvpButton.textContent =
+                    "RSVP 작성하기";
+
+            } else {
+
+                rsvpFormWrapper.classList.add(
+                    "active"
+                );
+
+                openRsvpButton.textContent =
+                    "RSVP 닫기";
+            }
+        }
+    );
+}
 
     }
 );

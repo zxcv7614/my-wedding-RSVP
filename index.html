@@ -299,29 +299,177 @@
 
         <section class="section rsvp-link-section">
 
-            <p class="section-label">
-                RSVP
-            </p>
+    <p class="section-label">
+        RSVP
+    </p>
 
-            <div class="section-line"></div>
+    <div class="section-line"></div>
 
-            <h2>
-                함께해 주실 수 있나요?
-            </h2>
+    <h2>
+        함께해 주실 수 있나요?
+    </h2>
 
-            <p class="rsvp-link-message">
-                참석 여부를 알려주시면<br>
-                소중히 준비하겠습니다.
-            </p>
+    <p class="rsvp-link-message">
+        참석 여부를 알려주시면<br>
+        소중히 준비하겠습니다.
+    </p>
 
-            <a
-                href="rsvp.html"
-                class="rsvp-button"
+    <button
+        type="button"
+        class="rsvp-button"
+        id="openRsvpButton"
+    >
+        RSVP 작성하기
+    </button>
+
+
+    <!-- RSVP FORM -->
+
+    <div
+        class="rsvp-form-wrapper"
+        id="rsvpFormWrapper"
+    >
+
+        <form id="rsvpForm">
+
+            <div class="rsvp-field">
+
+                <p class="rsvp-question">
+                    참석 여부
+                </p>
+
+                <label class="radio-option">
+                    <input
+                        type="radio"
+                        name="attendance"
+                        value="attending"
+                        required
+                    >
+                    <span>
+                        참석합니다
+                    </span>
+                </label>
+
+                <label class="radio-option">
+                    <input
+                        type="radio"
+                        name="attendance"
+                        value="unable"
+                        required
+                    >
+                    <span>
+                        참석이 어렵습니다
+                    </span>
+                </label>
+
+            </div>
+
+
+            <div class="rsvp-field">
+
+                <label for="guestName">
+                    성함
+                </label>
+
+                <input
+                    type="text"
+                    id="guestName"
+                    name="guestName"
+                    required
+                >
+
+            </div>
+
+
+            <div class="rsvp-field">
+
+                <label for="phone">
+                    연락처
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                >
+
+            </div>
+
+
+            <div class="rsvp-field">
+
+                <label for="guestCount">
+                    참석 인원
+                </label>
+
+                <select
+                    id="guestCount"
+                    name="guestCount"
+                >
+
+                    <option value="">
+                        선택해 주세요
+                    </option>
+
+                    <option value="1">
+                        1명
+                    </option>
+
+                    <option value="2">
+                        2명
+                    </option>
+
+                    <option value="3">
+                        3명
+                    </option>
+
+                    <option value="4">
+                        4명
+                    </option>
+
+                    <option value="5+">
+                        5명 이상
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="rsvp-field">
+
+                <label for="message">
+                    전하고 싶은 말씀
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-rsvp"
             >
-                RSVP 작성하기
-            </a>
+                Submit RSVP
+            </button>
 
-        </section>
+
+                <p
+                    id="rsvpResult"
+                    class="rsvp-result"
+                ></p>
+
+            </form>
+
+        </div>
+
+    </section>
 
     <!-- =========================
          CONTACT

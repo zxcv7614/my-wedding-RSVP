@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Nanum+Myeongjo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Nanum+Myeongjo:wght@400;700&family=Playfair+Display:wght@400;500&display=swap');
 
 
 /* =========================
@@ -9,16 +9,14 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
     margin: 0;
 
-    background: #f1f1f1;
+    background: #e8f3f6;
 
     color: #383838;
 
@@ -27,11 +25,9 @@ body {
         serif;
 }
 
-
 button {
     font: inherit;
 }
-
 
 .invitation {
     width: 100%;
@@ -39,11 +35,10 @@ button {
 
     margin: 0 auto;
 
-    background: #ffffff;
+    background: #f1f8fa;
 
     overflow: hidden;
 }
-
 
 
 /* =========================
@@ -53,135 +48,141 @@ button {
 .hero {
     position: relative;
 
-    background: #ffffff;
+    width: 100%;
+
+    background: #f1f8fa;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   HERO HEADER
+========================= */
+
+.hero-header {
+    width: 100%;
+
+    padding: 82px 20px 43px;
+
+    background: #f1f8fa;
 
     text-align: center;
 }
 
 
-/*
- * 상단 흰 공간
- */
+/* =========================
+   결 혼 합 니 다
+========================= */
 
-/* 상단 흰 공간 */
-.hero-top {
-    position: relative;
-    height: 300px;
-    background: #ffffff;
-    overflow: visible;
+.wedding-title-box {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+
+    border-top: 1px solid #8fbfca;
+    border-bottom: 1px solid #8fbfca;
 }
 
+.wedding-title-box span {
+    display: flex;
 
-/* SAVE THE DATE 세로 박스 */
-.save-date-card {
-    position: absolute;
+    align-items: center;
+    justify-content: center;
 
-    left: 50%;
-    bottom: -70px;
+    width: 40px;
+    height: 40px;
 
-    transform: translateX(-50%);
-
-    z-index: 20;
-
-    width: 140px;
-    min-height: 250px;
-
-    padding: 30px 18px 26px;
-
-    border: 1.5px solid #c8d8da;
-
-    background: rgba(255, 255, 255, 0.92);
-
-    text-align: center;
-}
-
-
-.save-title {
-    margin: 0;
+    border-left: 1px solid #afd2da;
 
     font-family:
-        "Cormorant Garamond",
-        Georgia,
+        "Nanum Myeongjo",
         serif;
 
-    font-size: 22px;
+    font-size: 19px;
+
     font-weight: 400;
 
-    line-height: 1.05;
-    letter-spacing: 6px;
+    color: #50575a;
+}
 
-    color: #333333;
+.wedding-title-box span:last-child {
+    border-right: 1px solid #afd2da;
 }
 
 
-.save-title span {
-    display: block;
+/* =========================
+   HERO NAMES
+========================= */
 
-    margin: 8px 0;
-
-    font-size: 17px;
-    letter-spacing: 3px;
-}
-
-
-.save-line {
-    width: 1px;
-    height: 46px;
-
-    margin: 22px auto;
-
-    background: #b9cacc;
-}
-
-
-.save-names {
-    margin: 0;
+.hero-names {
+    margin: 27px 0 0;
 
     font-family:
-        "Cormorant Garamond",
-        Georgia,
+        "Nanum Myeongjo",
         serif;
 
-    font-size: 14px;
+    font-size: 18px;
 
-    line-height: 1.7;
+    font-weight: 400;
 
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+
+    color: #4c4c4c;
 
     white-space: nowrap;
+}
 
-    color: #3f3f3f;
+.hero-heart {
+    display: inline-block;
+
+    margin: 0 9px;
+
+    font-size: 11px;
+
+    color: #82b9c6;
+
+    vertical-align: 1px;
 }
 
 
-/* 메인 사진 */
+/* =========================
+   MAIN PHOTO
+========================= */
+
 .hero-photo {
     position: relative;
-    z-index: 1;
 
     width: 100%;
-    height: 360px;
+    height: 430px;
 
     overflow: hidden;
 
     background: #eeeeee;
 }
 
-
 .hero-photo img {
+    display: block;
+
     width: 100%;
     height: 100%;
 
-    display: block;
-
     object-fit: cover;
-    object-position: center;
+
+    object-position: center 45%;
+
+    filter: none;
 }
 
 
-/*
- * 사진 밑 날짜 / 시간
- */
+/* =========================
+   HERO DATE
+========================= */
 
 .hero-date {
     display: flex;
@@ -191,36 +192,34 @@ button {
 
     gap: 13px;
 
-    min-height: 95px;
+    min-height: 100px;
 
-    padding: 22px 20px;
+    padding: 28px 20px;
 
-    background: #ffffff;
+    background: #f1f8fa;
 }
-
 
 .hero-date p {
     margin: 0;
 
     font-family:
-        Arial,
-        sans-serif;
+        "Playfair Display",
+        Georgia,
+        serif;
 
-    font-size: 11px;
+    font-size: 13px;
 
-    letter-spacing: 1.3px;
+    letter-spacing: 1.2px;
 
-    color: #707070;
+    color: #555555;
 }
-
 
 .hero-date span {
     width: 1px;
-    height: 12px;
+    height: 13px;
 
-    background: #c7d3d5;
+    background: #a9cdd5;
 }
-
 
 
 /* =========================
@@ -233,23 +232,22 @@ button {
     text-align: center;
 }
 
-
 .section-label {
     margin: 0;
 
     font-family:
-        "Cormorant Garamond",
+        "Playfair Display",
         Georgia,
         serif;
 
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
+
+    font-weight: 400;
 
     letter-spacing: 4px;
 
-    color: #7d989d;
+    color: #78aebb;
 }
-
 
 .section-line {
     width: 25px;
@@ -257,14 +255,14 @@ button {
 
     margin: 15px auto 0;
 
-    background: #bdcccf;
+    background: #a9cdd5;
 }
-
 
 .section h2 {
     margin: 28px 0 38px;
 
-    font-size: 26px;
+    font-size: 24px;
+
     font-weight: 400;
 
     line-height: 1.6;
@@ -273,15 +271,13 @@ button {
 }
 
 
-
 /* =========================
    INVITATION
 ========================= */
 
 .invitation-section {
-    background: #fafafa;
+    background: #f7fbfc;
 }
-
 
 .message {
     margin: 0;
@@ -291,8 +287,9 @@ button {
     line-height: 2.25;
 
     color: #606060;
-}
 
+    word-break: keep-all;
+}
 
 .heart {
     margin-top: 38px;
@@ -303,9 +300,8 @@ button {
 
     font-size: 21px;
 
-    color: #afc8cc;
+    color: #82b9c6;
 }
-
 
 
 /* =========================
@@ -313,9 +309,8 @@ button {
 ========================= */
 
 .gallery-section {
-    background: #ffffff;
+    background: #f7fbfc;
 }
-
 
 .gallery {
     display: grid;
@@ -326,8 +321,9 @@ button {
     gap: 6px;
 }
 
-
 .gallery-item {
+    position: relative;
+
     width: 100%;
 
     padding: 0;
@@ -345,12 +341,11 @@ button {
     -webkit-tap-highlight-color: transparent;
 }
 
-
 .gallery-item img {
+    display: block;
+
     width: 100%;
     height: 100%;
-
-    display: block;
 
     object-fit: cover;
 
@@ -360,11 +355,9 @@ button {
         transform 0.3s ease;
 }
 
-
 .gallery-item:hover img {
     transform: scale(1.03);
 }
-
 
 
 /* =========================
@@ -372,47 +365,191 @@ button {
 ========================= */
 
 .wedding-section {
-    background: #fafafa;
+    background: #f1f8fa;
 }
 
 
-.wedding-details {
-    color: #626262;
+/* =========================
+   CALENDAR
+========================= */
 
-    font-size: 15px;
+.wedding-calendar {
+    width: 100%;
+    max-width: 360px;
 
-    line-height: 2;
+    margin: 42px auto 38px;
+
+    padding: 24px 16px 20px;
+
+    border: 1px solid #c6dde3;
+
+    background:
+        rgba(255, 255, 255, 0.45);
+}
+
+.calendar-weekdays {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    padding-bottom: 13px;
+
+    margin-bottom: 5px;
+
+    border-bottom: 1px solid #dce6e8;
+
+    text-align: center;
+}
+
+.calendar-weekdays span {
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 9px;
+
+    letter-spacing: 0.7px;
+
+    color: #999999;
+}
+
+.calendar-days {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    text-align: center;
+}
+
+.calendar-days span {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 44px;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 13px;
+
+    color: #555555;
+
+    border-bottom: 1px solid #f0f2f2;
+}
+
+.calendar-days span:nth-last-child(-n+7) {
+    border-bottom: none;
+}
+
+.calendar-days .empty {
+    color: transparent;
+}
+
+.calendar-days .wedding-date {
+    color: #568b97;
+
+    font-weight: 500;
+}
+
+.calendar-days .wedding-date::before {
+    content: "";
+
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #82b5c1;
+
+    border-radius: 50%;
+}
+
+.calendar-days .wedding-date::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 3px;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: #82b5c1;
 }
 
 
-.wedding-details p {
-    margin: 7px 0;
+/* =========================
+   CALENDAR EVENT
+========================= */
+
+.calendar-event {
+    margin-top: 34px;
+
+    text-align: center;
 }
 
+.calendar-event-date {
+    margin: 0 0 11px;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1.4px;
+
+    color: #868686;
+}
+
+.calendar-event-time {
+    margin: 0;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 23px;
+
+    letter-spacing: 2px;
+
+    color: #444444;
+}
 
 .detail-divider {
     width: 1px;
-    height: 32px;
+    height: 30px;
 
     margin: 25px auto;
 
-    background: #bdcccf;
+    background: #a9cdd5;
 }
-
 
 .venue-name {
-    font-size: 17px;
+    margin: 0;
 
-    color: #454545;
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 18px;
+
+    color: #58747b;
 }
-
-
-.venue-address {
-    font-size: 14px;
-
-    color: #777777;
-}
-
 
 
 /* =========================
@@ -420,48 +557,99 @@ button {
 ========================= */
 
 .location-section {
-    background: #ffffff;
+    background: #f7fbfc;
 }
 
-
 .location-address {
-    margin: -12px 0 30px;
+    margin: 0;
 
     font-size: 14px;
 
     line-height: 2;
 
-    color: #777777;
+    color: #696969;
 }
-
 
 .map-button {
     display: inline-block;
 
+    margin-top: 32px;
+
     padding: 13px 24px;
 
-    border: 1px solid #b9cacd;
+    border: 1px solid #9fc5ce;
 
-    background: transparent;
+    background:
+        rgba(255, 255, 255, 0.5);
 
-    color: #637c80;
+    color: #5f8d98;
 
     text-decoration: none;
 
     font-size: 13px;
+
+    line-height: 1;
 
     transition:
         background 0.2s ease,
         color 0.2s ease;
 }
 
-
 .map-button:hover {
-    background: #edf3f4;
+    background: #8fb9c3;
 
-    color: #44595d;
+    color: #ffffff;
 }
 
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp-link-section {
+    background: #f1f8fa;
+}
+
+.rsvp-link-message {
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    color: #6e7d80;
+
+    word-break: keep-all;
+}
+
+.rsvp-button {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    min-width: 180px;
+
+    padding: 15px 28px;
+
+    border: 1px solid #8fb9c3;
+
+    background: #8fb9c3;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        opacity 0.2s ease;
+}
+
+.rsvp-button:hover {
+    opacity: 0.85;
+}
 
 
 /* =========================
@@ -469,75 +657,79 @@ button {
 ========================= */
 
 .contact-section {
-    background: #fafafa;
+    background: #f7fbfc;
 }
-
 
 .contact-grid {
-    display: grid;
+    display: flex;
 
-    grid-template-columns:
-        1fr 1px 1fr;
+    align-items: stretch;
+    justify-content: center;
 
-    align-items: center;
+    gap: 22px;
 
-    gap: 15px;
+    max-width: 390px;
+
+    margin: 0 auto;
 }
-
-
-.contact-divider {
-    width: 1px;
-    height: 80px;
-
-    background: #d8e0e1;
-}
-
 
 .contact-card {
+    flex: 1;
+
     display: flex;
 
     flex-direction: column;
 
     align-items: center;
+
+    min-width: 0;
 }
 
-
 .contact-role {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 
     font-family:
-        Arial,
-        sans-serif;
+        "Playfair Display",
+        Georgia,
+        serif;
 
     font-size: 10px;
 
     letter-spacing: 2px;
 
-    color: #7d989d;
+    color: #86adb6;
 }
-
 
 .contact-card strong {
-    margin-bottom: 15px;
+    margin-bottom: 11px;
 
-    font-size: 17px;
+    font-size: 16px;
 
     font-weight: 400;
+
+    color: #454545;
 }
 
-
 .contact-card a {
+    color: #6d858b;
+
     font-family:
-        Arial,
-        sans-serif;
+        "Playfair Display",
+        Georgia,
+        serif;
 
     font-size: 11px;
 
-    color: #707b7d;
-
     text-decoration: none;
+
+    white-space: nowrap;
 }
 
+.contact-divider {
+    width: 1px;
+
+    background: #c9dde2;
+}
 
 
 /* =========================
@@ -545,36 +737,33 @@ button {
 ========================= */
 
 .account-section {
-    background: #ffffff;
+    background: #f7fbfc;
 }
-
 
 .account-box {
     margin-bottom: 12px;
 
     padding: 22px 20px;
 
-    border: 1px solid #e4e7e7;
+    border: 1px solid #d4e5e9;
 
-    background: #fafafa;
+    background:
+        rgba(255, 255, 255, 0.55);
 
     text-align: left;
 }
 
-
 .account-box:last-child {
     margin-bottom: 0;
 }
-
 
 .account-title {
     margin: 0 0 11px;
 
     font-size: 15px;
 
-    color: #5c7377;
+    color: #689ba7;
 }
-
 
 .account-info {
     margin: 0;
@@ -589,7 +778,6 @@ button {
 }
 
 
-
 /* =========================
    CLOSING
 ========================= */
@@ -597,27 +785,25 @@ button {
 .closing {
     padding: 100px 30px;
 
-    background: #fafafa;
+    background: #f1f8fa;
 
     text-align: center;
 }
-
 
 .closing-label {
     margin: 0;
 
     font-family:
-        "Cormorant Garamond",
+        "Playfair Display",
         Georgia,
         serif;
 
-    font-size: 13px;
+    font-size: 12px;
 
     letter-spacing: 4px;
 
-    color: #829da2;
+    color: #78aebb;
 }
-
 
 .closing-message {
     margin: 30px 0 0;
@@ -629,7 +815,6 @@ button {
     color: #646464;
 }
 
-
 .closing-heart {
     margin-top: 25px;
 
@@ -639,9 +824,8 @@ button {
 
     font-size: 20px;
 
-    color: #aac4c8;
+    color: #82b9c6;
 }
-
 
 .closing strong {
     display: block;
@@ -654,7 +838,6 @@ button {
 
     color: #484848;
 }
-
 
 
 /* =========================
@@ -679,11 +862,9 @@ button {
         rgba(15, 15, 15, 0.94);
 }
 
-
 .photo-modal.active {
     display: flex;
 }
-
 
 .photo-modal img {
     display: block;
@@ -696,7 +877,6 @@ button {
 
     object-fit: contain;
 }
-
 
 .close-button {
     position: absolute;
@@ -722,11 +902,11 @@ button {
         sans-serif;
 
     font-size: 38px;
+
     font-weight: 200;
 
     cursor: pointer;
 }
-
 
 
 /* =========================
@@ -735,30 +915,67 @@ button {
 
 @media (max-width: 480px) {
 
-    .hero-top {
-        height: 285px;
+    .hero-header {
+        padding:
+            82px
+            20px
+            43px;
     }
 
+    .wedding-title-box span {
+        width: 40px;
+        height: 40px;
+
+        font-size: 19px;
+    }
+
+    .hero-names {
+        margin-top: 27px;
+
+        font-size: 18px;
+    }
 
     .hero-photo {
-        height: 350px;
+        height: 410px;
     }
 
-
-    .save-date-card {
-        width: 130px;
+    .hero-date {
+        min-height: 95px;
 
         padding:
-            27px 17px 25px;
+            25px
+            16px;
     }
 
-
-    .save-title {
-        font-size: 20px;
+    .section {
+        padding:
+            88px
+            26px;
     }
 
+    .section h2 {
+        font-size: 22px;
+    }
+
+    .wedding-calendar {
+        padding:
+            21px
+            12px
+            17px;
+    }
+
+    .calendar-days span {
+        height: 42px;
+    }
+
+    .contact-grid {
+        gap: 15px;
+    }
+
+    .contact-card a {
+        font-size: 10px;
+    }
 }
-
 
 
 /* =========================
@@ -771,245 +988,9 @@ button {
         padding: 30px 0;
     }
 
-
     .invitation {
         box-shadow:
             0 8px 35px
             rgba(0, 0, 0, 0.06);
     }
-
-}
-/* =========================
-   RSVP LINK
-========================= */
-
-.rsvp-link-section {
-    background: #fafafa;
-}
-
-.rsvp-link-message {
-    margin: -8px 0 30px;
-
-    font-size: 15px;
-
-    line-height: 2;
-
-    color: #656565;
-}
-
-.rsvp-button {
-    display: inline-block;
-
-    padding: 14px 30px;
-
-    border: 1px solid #b9cacd;
-
-    background: #ffffff;
-
-    color: #5f777b;
-
-    text-decoration: none;
-
-    font-size: 13px;
-
-    letter-spacing: 1px;
-
-    transition:
-        background 0.2s ease,
-        color 0.2s ease;
-}
-
-.rsvp-button:hover {
-    background: #eef4f5;
-
-    color: #3f5559;
-}
-/* ========================================
-   A NOTE FROM US
-======================================== */
-
-.note-section {
-    background: #fafafa;
-}
-
-.note-message {
-    max-width: 410px;
-    margin: 0 auto;
-
-    padding: 0 22px;
-
-    font-family: "Nanum Myeongjo", serif;
-    font-size: 14px;
-    font-weight: 400;
-
-    line-height: 2.15;
-
-    color: #686868;
-
-    word-break: keep-all;
-}
-
-
-
-/* ========================================
-   WEDDING CALENDAR
-======================================== */
-
-.wedding-calendar {
-    width: 88%;
-    max-width: 360px;
-
-    margin: 45px auto 42px;
-}
-
-
-/* 요일 */
-
-.calendar-weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-
-    margin-bottom: 16px;
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 10px;
-    letter-spacing: 1px;
-
-    color: #9a9a9a;
-
-    text-align: center;
-}
-
-
-/* 날짜 */
-
-.calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-
-    row-gap: 16px;
-
-    text-align: center;
-}
-
-
-.calendar-days span {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 34px;
-    height: 34px;
-
-    margin: auto;
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 14px;
-
-    color: #555;
-}
-
-
-/* 결혼식 날짜 13일 */
-
-.calendar-days .wedding-date {
-    border: 1px solid #b9cacc;
-    border-radius: 50%;
-
-    color: #536f74;
-
-    font-weight: 500;
-}
-
-
-/* 13일 아래 작은 점 */
-
-.calendar-days .wedding-date::after {
-    content: "";
-
-    position: absolute;
-
-    bottom: -6px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: 3px;
-    height: 3px;
-
-    border-radius: 50%;
-
-    background: #9eb5b9;
-}
-
-
-
-/* 달력 아래 Event */
-
-.calendar-event {
-    margin-top: 35px;
-
-    text-align: center;
-}
-
-
-.calendar-event-date {
-    margin: 0 0 12px;
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 12px;
-
-    letter-spacing: 1.8px;
-
-    color: #858585;
-}
-
-
-.calendar-event-time {
-    margin: 0;
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-    font-size: 25px;
-
-    letter-spacing: 2px;
-
-    color: #444;
-}
-
-
-.calendar-event .detail-divider {
-    width: 25px;
-    height: 1px;
-
-    margin: 24px auto;
-
-    background: #c8d2d4;
-}
-
-.calendar-event .venue-name {
-    margin: 0;
-
-    font-size: 15px;
-
-    letter-spacing: 1px;
-
-    color: #555;
 }

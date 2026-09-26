@@ -153,77 +153,52 @@ document.addEventListener(
 
 
         /* ========================================
-           WEDDING COUNTDOWN
+        WEDDING COUNTDOWN
         ======================================== */
 
-        const weddingDate =
-            new Date(
-                2027,
-                1,
-                13
-            );
+        const weddingDate = Date.UTC(2027, 1, 13);
 
-        const today =
-            new Date();
+        const now = new Date();
 
-
-        today.setHours(
-            0,
-            0,
-            0,
-            0
+        const today = Date.UTC(
+            now.getFullYear(),
+            now.getMonth(),
+            now.getDate()
         );
-
-        weddingDate.setHours(
-            0,
-            0,
-            0,
-            0
-        );
-
 
         const difference =
-            weddingDate.getTime() -
-            today.getTime();
-
+            weddingDate - today;
 
         const daysLeft =
-            Math.ceil(
+            Math.round(
                 difference /
-                (
-                    1000 *
-                    60 *
-                    60 *
-                    24
-                )
+                (1000 * 60 * 60 * 24)
             );
-
 
         const weddingCountdown =
             document.getElementById(
                 "weddingCountdown"
             );
 
-
         if (weddingCountdown) {
 
             if (daysLeft > 0) {
 
                 weddingCountdown.innerHTML =
-                    "태윤과 민영의 결혼식이 " +
-                    "<strong>" +
+                    '태윤과 민영의 결혼식이 ' +
+                    '<strong>' +
                     daysLeft +
-                    "</strong>일 남았습니다.";
+                    '</strong>일 남았습니다.';
 
             } else if (daysLeft === 0) {
 
                 weddingCountdown.innerHTML =
-                    "오늘은 태윤과 민영의 결혼식 날입니다. ♡";
+                    '오늘은 태윤과 민영의 결혼식 날입니다. ♡';
 
             } else {
 
                 weddingCountdown.innerHTML =
-                    "태윤과 민영의 결혼식이 있었습니다. ♡";
+                    '태윤과 민영의 결혼식이 있었습니다. ♡';
             }
         }
 

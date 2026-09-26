@@ -388,3 +388,23 @@ input:checked + span {
     }
 
 }
+/* =========================
+   WEDDING TIME
+========================= */
+
+.calendar-event-time {
+    margin: 10px 0 0;
+
+    font-family:
+        "Nanum Myeongjo",
+        serif;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    letter-spacing: 1.5px;
+
+    line-height: 1.8;
+
+    color: #718b91;
+}

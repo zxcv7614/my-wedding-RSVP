@@ -198,11 +198,7 @@ document.addEventListener(
         const difference =
             weddingDate - today;
 
-        const daysLeft =
-            Math.round(
-                difference /
-                (1000 * 60 * 60 * 24)
-            );
+        const daysLeft = 999;
 
         const weddingCountdown =
             document.getElementById(

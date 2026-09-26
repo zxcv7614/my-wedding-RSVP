@@ -290,7 +290,17 @@ button {
 
     word-break: keep-all;
 }
+.family-name {
+    font-size: 13px;
+    color: #7d8f93;
+    letter-spacing: 0.5px;
+    line-height: 2;
+}
 
+.family-name strong {
+    font-weight: 700;
+    color: #617a80;
+}
 .heart {
     margin-top: 38px;
 
@@ -302,6 +312,34 @@ button {
 
     color: #82b9c6;
 }
+
+/* =========================
+   A NOTE FROM US
+========================= */
+
+.note-section {
+    background: #ffffff;
+}
+
+
+.note-message {
+    max-width: 410px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 2.2;
+
+    color: #686868;
+
+    word-break: keep-all;
+}
+
 
 
 /* =========================

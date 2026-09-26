@@ -1413,3 +1413,31 @@ button {
 
     word-break: keep-all;
 }
+.calendar-event-time {
+    margin: 16px 0 18px;
+
+    font-family: "Nanum Myeongjo", serif;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    color: #7899a1;
+}
+
+.calendar-event-time span {
+    margin-left: 6px;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 25px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    color: #6f9da8;
+}

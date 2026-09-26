@@ -408,3 +408,24 @@ input:checked + span {
 
     color: #718b91;
 }
+/* =========================
+   WEDDING TIME - FINAL
+========================= */
+
+.calendar-event-time {
+    margin: 16px 0 18px !important;
+
+    font-family:
+        "Cormorant Garamond",
+        "Nanum Myeongjo",
+        serif !important;
+
+    font-size: 20px !important;
+    font-weight: 400 !important;
+
+    letter-spacing: 3px !important;
+
+    color: #6f9da8 !important;
+
+    line-height: 1.6;
+}

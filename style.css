@@ -1308,3 +1308,52 @@ button {
         font-size: 11px;
     }
 }
+/* =========================
+   WEDDING COUNTDOWN
+========================= */
+
+.wedding-countdown {
+    margin: 35px 0 0;
+
+    font-family: "Nanum Myeongjo", serif;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.8;
+
+    color: #66777b;
+}
+
+.wedding-countdown strong {
+    margin: 0 3px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 19px;
+    font-weight: 500;
+
+    color: #6d9eaa;
+}
+.account-note {
+    margin: -10px auto 35px;
+
+    font-size: 13px;
+    line-height: 2;
+
+    color: #78898d;
+
+    word-break: keep-all;
+}
+.account-note {
+    max-width: 390px;
+
+    margin: -8px auto 38px;
+
+    font-size: 13px;
+    line-height: 2;
+
+    color: #78898d;
+
+    word-break: keep-all;
+}

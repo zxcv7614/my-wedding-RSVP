@@ -556,20 +556,18 @@ button {
 ========================= */
 
 .calendar-event-time {
-    margin: 10px 0 0;
+    margin: 12px 0 0;
 
     font-family:
-        "Playfair Display",
+        "Nanum Myeongjo",
         serif;
 
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
 
-    line-height: 1.8;
-
-    color: #718b91;
+    color: #7899a1;
 }
 
 .calendar-event-time {

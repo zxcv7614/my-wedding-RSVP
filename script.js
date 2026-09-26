@@ -177,47 +177,31 @@ document.addEventListener(
 
             }
         );
-                     /* ========================================
+        /* ========================================
         WEDDING COUNTDOWN
         ======================================== */
 
-        const weddingDate =
-            new Date(
-                2027,
-                1,
-                13
-            );
-
-        const today =
-            new Date();
-
-        today.setHours(
-            0,
-            0,
-            0,
-            0
+        const weddingDate = Date.UTC(
+            2027,
+            1,  // February
+            13
         );
 
-        weddingDate.setHours(
-            0,
-            0,
-            0,
-            0
+        const now = new Date();
+
+        const today = Date.UTC(
+            now.getFullYear(),
+            now.getMonth(),
+            now.getDate()
         );
 
         const difference =
-            weddingDate.getTime() -
-            today.getTime();
+            weddingDate - today;
 
         const daysLeft =
-            Math.ceil(
+            Math.round(
                 difference /
-                (
-                    1000 *
-                    60 *
-                    60 *
-                    24
-                )
+                (1000 * 60 * 60 * 24)
             );
 
         const weddingCountdown =

@@ -1655,3 +1655,66 @@ button {
         padding-bottom: 55px;
     }
 }
+/* 결혼합니다 박스 강조 */
+
+.wedding-title-box {
+    border-top: 1.5px solid #6099a8;
+    border-bottom: 1.5px solid #6099a8;
+
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.wedding-title-box span {
+    width: 43px;
+    height: 45px;
+
+    border-left: 1.5px solid #80aebb;
+
+    font-size: 21px;
+    font-weight: 500;
+    color: #354b52;
+}
+
+.wedding-title-box span:last-child {
+    border-right: 1.5px solid #80aebb;
+}
+/* 결혼 날짜 및 시간 */
+
+.hero .hero-date {
+    gap: 16px;
+    padding: 30px 15px 55px;
+}
+
+.hero-date p {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #344a51;
+}
+
+.hero-date span {
+    width: 1.5px;
+    height: 20px;
+    background: #75a8b5;
+}
+
+/* 모바일 화면 */
+
+@media (max-width: 480px) {
+    .hero-date p {
+        font-size: 16px;
+    }
+
+    .hero .hero-date {
+        gap: 12px;
+    }
+}
+.hero-names {
+    font-size: 21px;
+    font-weight: 500;
+    color: #344a51;
+}
+
+.hero-heart {
+    color: #659eac;
+}

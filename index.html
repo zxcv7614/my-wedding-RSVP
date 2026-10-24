@@ -629,16 +629,16 @@
 
 
 
-<!-- =========================
-     PHOTO MODAL
-========================== -->
+<!-- PHOTO MODAL -->
 
 <div
     id="photoModal"
     class="photo-modal"
     aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-label="웨딩 사진 갤러리"
 >
-
     <button
         type="button"
         class="close-button"
@@ -647,14 +647,36 @@
         ×
     </button>
 
+    <!-- 이전 사진 -->
+    <button
+        type="button"
+        class="photo-prev"
+        aria-label="이전 사진"
+    >
+        &#10094;
+    </button>
+
+    <!-- 확대 사진 -->
     <img
         id="modalImage"
         src=""
         alt="확대된 웨딩 사진"
     >
 
-</div>
+    <!-- 다음 사진 -->
+    <button
+        type="button"
+        class="photo-next"
+        aria-label="다음 사진"
+    >
+        &#10095;
+    </button>
 
+    <!-- 사진 번호 -->
+    <div class="photo-counter" aria-live="polite">
+        1 / 12
+    </div>
+</div>
 
 <script src="rsvp.js?v=2"></script>
 

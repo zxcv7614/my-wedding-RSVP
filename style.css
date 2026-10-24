@@ -1441,3 +1441,75 @@ button {
 
     color: #6f9da8;
 }
+/* =========================
+   GALLERY SLIDE NAVIGATION
+========================= */
+
+.photo-prev,
+.photo-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 1000001;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 52px;
+
+    border: none;
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+    font-size: 27px;
+
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.photo-prev {
+    left: 8px;
+}
+
+.photo-next {
+    right: 8px;
+}
+
+.photo-prev:hover,
+.photo-next:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 사진 번호 */
+
+.photo-counter {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: rgba(255, 255, 255, 0.85);
+    font-family: "Playfair Display", serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* 모바일 */
+
+@media (max-width: 480px) {
+    .photo-prev,
+    .photo-next {
+        width: 35px;
+        height: 45px;
+        font-size: 22px;
+        background: transparent;
+    }
+
+    .photo-modal img {
+        max-width: 85vw;
+        max-height: 80vh;
+    }
+}

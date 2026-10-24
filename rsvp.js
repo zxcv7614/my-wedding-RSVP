@@ -2,154 +2,208 @@ document.addEventListener(
     "DOMContentLoaded",
     function () {
 
-        /* ========================================
-           GALLERY PHOTO MODAL
-        ======================================== */
+/* ========================================
+   GALLERY PHOTO MODAL + SWIPE
+======================================== */
 
-        const galleryItems =
-            document.querySelectorAll(
-                ".gallery-item"
-            );
+const galleryItems =
+    document.querySelectorAll(".gallery-item");
 
-        const modal =
-            document.getElementById(
-                "photoModal"
-            );
+const modal =
+    document.getElementById("photoModal");
 
-        const modalImage =
-            document.getElementById(
-                "modalImage"
-            );
+const modalImage =
+    document.getElementById("modalImage");
 
-        const closeButton =
-            document.querySelector(
-                ".close-button"
-            );
+const closeButton =
+    document.querySelector(".close-button");
 
+const prevButton =
+    document.querySelector(".photo-prev");
 
-        /* ========================================
-           OPEN PHOTO
-        ======================================== */
+const nextButton =
+    document.querySelector(".photo-next");
 
-        galleryItems.forEach(
-            function (item) {
+const photoCounter =
+    document.querySelector(".photo-counter");
 
-                item.addEventListener(
-                    "click",
-                    function () {
+let currentPhotoIndex = 0;
 
-                        const photo =
-                            item.querySelector(
-                                "img"
-                            );
-
-                        if (
-                            !photo ||
-                            !modal ||
-                            !modalImage
-                        ) {
-                            return;
-                        }
-
-                        modalImage.src =
-                            photo.src;
-
-                        modal.classList.add(
-                            "active"
-                        );
-
-                        modal.setAttribute(
-                            "aria-hidden",
-                            "false"
-                        );
-
-                        document.body.style.overflow =
-                            "hidden";
-                    }
-                );
-            }
-        );
+const galleryPhotos = Array.from(galleryItems)
+    .map(item => item.querySelector("img"))
+    .filter(img => img !== null);
 
 
-        /* ========================================
-           CLOSE PHOTO
-        ======================================== */
+/* DISPLAY PHOTO */
 
-        function closePhoto() {
+function showPhoto(index) {
 
-            if (!modal) {
-                return;
-            }
+    if (!modalImage || galleryPhotos.length === 0) {
+        return;
+    }
 
-            modal.classList.remove(
-                "active"
-            );
+    currentPhotoIndex =
+        (index + galleryPhotos.length) %
+        galleryPhotos.length;
 
-            modal.setAttribute(
-                "aria-hidden",
-                "true"
-            );
+    const photo = galleryPhotos[currentPhotoIndex];
 
-            if (modalImage) {
-                modalImage.src = "";
-            }
+    modalImage.src = photo.src;
+    modalImage.alt = photo.alt;
 
-            document.body.style.overflow =
-                "";
+    if (photoCounter) {
+        photoCounter.textContent =
+            `${currentPhotoIndex + 1} / ${galleryPhotos.length}`;
+    }
+}
+
+
+/* OPEN PHOTO */
+
+galleryItems.forEach((item, index) => {
+
+    item.addEventListener("click", function () {
+
+        if (!modal || !modalImage) {
+            return;
         }
 
+        showPhoto(index);
 
-        /* X BUTTON */
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
 
-        if (closeButton) {
+        document.body.style.overflow = "hidden";
+    });
 
-            closeButton.addEventListener(
-                "click",
-                function (event) {
+});
 
-                    event.stopPropagation();
 
-                    closePhoto();
-                }
-            );
+/* CLOSE PHOTO */
+
+function closePhoto() {
+
+    if (!modal) {
+        return;
+    }
+
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+
+    if (modalImage) {
+        modalImage.removeAttribute("src");
+    }
+
+    document.body.style.overflow = "";
+}
+
+
+/* NEXT PHOTO */
+
+function nextPhoto() {
+    showPhoto(currentPhotoIndex + 1);
+}
+
+
+/* PREVIOUS PHOTO */
+
+function previousPhoto() {
+    showPhoto(currentPhotoIndex - 1);
+}
+
+
+/* ARROW BUTTONS */
+
+if (nextButton) {
+    nextButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        nextPhoto();
+    });
+}
+
+if (prevButton) {
+    prevButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        previousPhoto();
+    });
+}
+
+
+/* CLOSE BUTTON */
+
+if (closeButton) {
+    closeButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        closePhoto();
+    });
+}
+
+
+/* CLICK BACKGROUND */
+
+if (modal) {
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            closePhoto();
         }
+    });
+}
 
 
-        /* CLICK BACKGROUND */
+/* KEYBOARD */
 
-        if (modal) {
+document.addEventListener("keydown", function (event) {
 
-            modal.addEventListener(
-                "click",
-                function (event) {
+    if (!modal || !modal.classList.contains("active")) {
+        return;
+    }
 
-                    if (
-                        event.target === modal
-                    ) {
-                        closePhoto();
-                    }
-                }
-            );
-        }
+    if (event.key === "Escape") {
+        closePhoto();
+    }
+
+    if (event.key === "ArrowRight") {
+        nextPhoto();
+    }
+
+    if (event.key === "ArrowLeft") {
+        previousPhoto();
+    }
+});
 
 
-        /* ESC KEY */
+/* MOBILE SWIPE */
 
-        document.addEventListener(
-            "keydown",
-            function (event) {
+let touchStartX = 0;
+let touchStartY = 0;
 
-                if (
-                    event.key === "Escape" &&
-                    modal &&
-                    modal.classList.contains(
-                        "active"
-                    )
-                ) {
-                    closePhoto();
-                }
+if (modal) {
+
+    modal.addEventListener("touchstart", function (event) {
+        touchStartX = event.changedTouches[0].screenX;
+        touchStartY = event.changedTouches[0].screenY;
+    }, { passive: true });
+
+    modal.addEventListener("touchend", function (event) {
+
+        const touchEndX = event.changedTouches[0].screenX;
+        const touchEndY = event.changedTouches[0].screenY;
+
+        const diffX = touchStartX - touchEndX;
+        const diffY = touchStartY - touchEndY;
+
+        if (Math.abs(diffX) > 50 &&
+            Math.abs(diffX) > Math.abs(diffY)) {
+
+            if (diffX > 0) {
+                nextPhoto();
+            } else {
+                previousPhoto();
             }
-        );
+        }
+
+    }, { passive: true });
+}
 
 
         /* ========================================

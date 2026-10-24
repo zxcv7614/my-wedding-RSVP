@@ -166,19 +166,6 @@ button {
     vertical-align: 1px;
 }
 
-
-/* =========================
-   MAIN PHOTO
-========================= */
-
-.hero-photo {
-
-}
-
-.hero-photo img {
-
-}
-
 /* =========================
    HERO DATE
 ========================= */
@@ -1607,4 +1594,64 @@ button {
     position: relative !important;
     z-index: 1 !important;
     background: transparent !important;
+}
+/* NEW FULL SCREEN WEDDING HERO */
+
+.hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #f1f8fa;
+    isolation: isolate;
+}
+
+/* 사진만 20% 투명도 적용 */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/main.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    opacity: 0.5;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 기존 하늘색 배경 제거 */
+.hero .hero-header,
+.hero .hero-date {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+/* 상단 결혼합니다 */
+.hero .hero-header {
+    padding: 100px 20px 40px;
+}
+
+/* 하단 결혼식 날짜 */
+.hero .hero-date {
+    padding: 30px 20px 60px;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero .hero-header {
+        padding-top: 90px;
+    }
+
+    .hero .hero-date {
+        padding-bottom: 55px;
+    }
 }

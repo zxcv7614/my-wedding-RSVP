@@ -1582,3 +1582,29 @@ button {
         background-position: center center;
     }
 }
+/* HERO BACKGROUND - FINAL OVERRIDE */
+
+.hero {
+    position: relative !important;
+    min-height: 100svh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    background: #f1f8fa !important;
+}
+
+.hero-background {
+    position: absolute !important;
+    inset: 0 !important;
+    background: url("images/main.png") center center / cover no-repeat !important;
+    opacity: 0.2 !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+}
+
+.hero-header,
+.hero-date {
+    position: relative !important;
+    z-index: 1 !important;
+    background: transparent !important;
+}

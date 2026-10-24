@@ -47,32 +47,48 @@ button {
 
 .hero {
     position: relative;
-
     width: 100%;
+    min-height: 100svh;
 
     background: #f1f8fa;
-
     text-align: center;
-
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* 메인 사진 배경 */
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/main.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+}
 
 /* =========================
    HERO HEADER
 ========================= */
 
 .hero-header {
-    width: 100%;
+    position: relative;
+    z-index: 1;
 
+    width: 100%;
     padding: 82px 20px 43px;
 
-    background: #f1f8fa;
-
+    background: transparent;
     text-align: center;
 }
-
-
 /* =========================
    결 혼 합 니 다
 ========================= */
@@ -156,47 +172,30 @@ button {
 ========================= */
 
 .hero-photo {
-    position: relative;
 
-    width: 100%;
-    height: 430px;
-
-    overflow: hidden;
-
-    background: #eeeeee;
 }
 
 .hero-photo img {
-    display: block;
 
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    object-position: center 45%;
-
-    filter: none;
 }
-
 
 /* =========================
    HERO DATE
 ========================= */
 
 .hero-date {
-    display: flex;
+    position: relative;
+    z-index: 1;
 
+    display: flex;
     align-items: center;
     justify-content: center;
 
     gap: 13px;
-
     min-height: 100px;
-
     padding: 28px 20px;
 
-    background: #f1f8fa;
+    background: transparent;
 }
 
 .hero-date p {
@@ -1511,5 +1510,75 @@ button {
     .photo-modal img {
         max-width: 85vw;
         max-height: 80vh;
+    }
+}
+/* ====================================
+   HERO BACKGROUND PHOTO
+==================================== */
+
+.hero {
+    position: relative;
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: center;
+    overflow: hidden;
+
+    padding: 80px 20px 60px;
+    box-sizing: border-box;
+}
+
+/* 배경 사진 */
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images/main.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    opacity: 0.2;
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+/* 글씨를 사진 위에 표시 */
+
+.hero-header,
+.hero-date {
+    position: relative;
+    z-index: 1;
+}
+
+/* 상단 타이틀 */
+
+.hero-header {
+    width: 100%;
+}
+
+/* 하단 날짜 */
+
+.hero-date {
+    width: 100%;
+}
+
+/* 모바일 */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 100svh;
+        padding: 65px 20px 45px;
+    }
+
+    .hero-background {
+        background-position: center center;
     }
 }

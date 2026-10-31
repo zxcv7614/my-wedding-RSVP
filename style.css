@@ -1,1721 +1,3488 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Nanum+Myeongjo:wght@400;700&family=Playfair+Display:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Gaegu&family=Gamja+Flower&family=Hi+Melody&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 
 /* =========================
+
    BASE
+
 ========================= */
 
+
+
 * {
+
     box-sizing: border-box;
+
 }
+
+
 
 html {
+
     scroll-behavior: smooth;
+
 }
 
+
+
 body {
+
     margin: 0;
+
+
 
     background: #e8f3f6;
 
+
+
     color: #383838;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         serif;
+
 }
+
+
 
 button {
+
     font: inherit;
+
 }
 
+
+
 .invitation {
+
     width: 100%;
+
     max-width: 480px;
+
+
 
     margin: 0 auto;
 
+
+
     background: #f1f8fa;
 
+
+
     overflow: hidden;
+
 }
+
+
+
 
 
 /* =========================
+
    HERO
+
 ========================= */
 
+
+
 .hero {
+
     position: relative;
+
     width: 100%;
+
     min-height: 100svh;
 
+
+
     background: #f1f8fa;
+
     text-align: center;
+
     overflow: hidden;
 
+
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
+
 }
+
+
 
 /* 메인 사진 배경 */
 
+
+
 .hero-background {
+
     position: absolute;
+
     inset: 0;
 
+
+
     background-image: url("images/main.png");
+
     background-size: cover;
+
     background-position: center center;
+
     background-repeat: no-repeat;
 
+
+
     opacity: 0.2;
+
     pointer-events: none;
+
     z-index: 0;
+
 }
 
+
+
 /* =========================
+
    HERO HEADER
+
 ========================= */
+
+
 
 .hero-header {
+
     position: relative;
+
     z-index: 1;
 
+
+
     width: 100%;
+
     padding: 82px 20px 43px;
 
+
+
     background: transparent;
+
     text-align: center;
+
 }
+
 /* =========================
+
    결 혼 합 니 다
+
 ========================= */
 
+
+
 .wedding-title-box {
+
     display: inline-flex;
 
+
+
     align-items: center;
+
     justify-content: center;
+
+
 
     margin: 0 auto;
 
+
+
     border-top: 1px solid #8fbfca;
+
     border-bottom: 1px solid #8fbfca;
+
 }
 
+
+
 .wedding-title-box span {
+
     display: flex;
 
+
+
     align-items: center;
+
     justify-content: center;
 
+
+
     width: 40px;
+
     height: 40px;
+
+
 
     border-left: 1px solid #afd2da;
 
+
+
     font-family:
-        "Gaegu",
+
+        "Gamja Flower",
+
         serif;
+
+
 
     font-size: 19px;
 
+
+
     font-weight: 400;
 
+
+
     color: #50575a;
+
 }
 
+
+
 .wedding-title-box span:last-child {
+
     border-right: 1px solid #afd2da;
+
 }
+
+
+
 
 
 /* =========================
+
    HERO NAMES
+
 ========================= */
 
+
+
 .hero-names {
+
     margin: 27px 0 0;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         serif;
+
+
 
     font-size: 18px;
 
+
+
     font-weight: 400;
 
+
+
     letter-spacing: 0.5px;
+
+
 
     color: #4c4c4c;
 
+
+
     white-space: nowrap;
+
 }
 
+
+
 .hero-heart {
+
     display: inline-block;
+
+
 
     margin: 0 9px;
 
+
+
     font-size: 11px;
+
+
 
     color: #82b9c6;
 
+
+
     vertical-align: 1px;
+
 }
+
+
 
 /* =========================
+
    HERO DATE
+
 ========================= */
 
+
+
 .hero-date {
+
     position: relative;
+
     z-index: 1;
 
+
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
+
+
     gap: 13px;
+
     min-height: 100px;
+
     padding: 28px 20px;
 
+
+
     background: transparent;
+
 }
 
+
+
 .hero-date p {
+
     margin: 0;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         Georgia,
+
         serif;
 
+
+
     font-size: 13px;
+
+
 
     letter-spacing: 1.2px;
 
+
+
     color: #555555;
+
 }
+
+
 
 .hero-date span {
+
     width: 1px;
+
     height: 13px;
 
+
+
     background: #a9cdd5;
+
 }
+
+
+
 
 
 /* =========================
+
    COMMON SECTION
+
 ========================= */
 
+
+
 .section {
+
     padding: 95px 32px;
 
+
+
     text-align: center;
+
 }
 
+
+
 .section-label {
+
     margin: 0;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         Georgia,
+
         serif;
+
+
 
     font-size: 13px;
 
+
+
     font-weight: 400;
+
+
 
     letter-spacing: 4px;
 
+
+
     color: #78aebb;
+
 }
 
+
+
 .section-line {
+
     width: 25px;
+
     height: 1px;
+
+
 
     margin: 15px auto 0;
 
+
+
     background: #a9cdd5;
+
 }
 
+
+
 .section h2 {
+
     margin: 28px 0 38px;
+
+
 
     font-size: 24px;
 
+
+
     font-weight: 400;
+
+
 
     line-height: 1.6;
 
+
+
     color: #424242;
+
 }
+
+
+
 
 
 /* =========================
+
    INVITATION
+
 ========================= */
 
+
+
 .invitation-section {
+
     background: #f7fbfc;
+
 }
 
+
+
 .message {
+
     margin: 0;
 
+
+
     font-size: 18px;
+
+
 
     line-height: 2.25;
 
+
+
     color: #606060;
 
+
+
     word-break: keep-all;
+
 }
+
 .family-name {
+
     font-size: 15px;
+
     color: #7d8f93;
+
     letter-spacing: 0.5px;
+
     line-height: 2;
+
 }
+
+
 
 .family-name strong {
+
     font-weight: 700;
+
     color: #617a80;
+
 }
+
 .heart {
+
     margin-top: 38px;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         sans-serif;
+
+
 
     font-size: 24px;
 
+
+
     color: #82b9c6;
+
 }
+
+
 
 /* =========================
+
    A NOTE FROM US
+
 ========================= */
 
+
+
 .note-section {
+
     background: #ffffff;
+
 }
+
+
+
 
 
 .note-message {
+
     max-width: 410px;
+
+
 
     margin: 0 auto;
 
+
+
     padding: 0;
+
+
 
     font-size: 14px;
 
+
+
     font-weight: 400;
+
+
 
     line-height: 2.2;
 
+
+
     color: #686868;
 
+
+
     word-break: keep-all;
+
 }
+
+
+
+
 
 
 
 /* =========================
+
    GALLERY
+
 ========================= */
 
+
+
 .gallery-section {
+
     background: #f7fbfc;
+
 }
+
+
 
 .gallery {
+
     display: grid;
 
+
+
     grid-template-columns:
+
         repeat(2, 1fr);
 
+
+
     gap: 6px;
+
 }
 
+
+
 .gallery-item {
+
     position: relative;
+
+
 
     width: 100%;
 
+
+
     padding: 0;
 
+
+
     border: 0;
+
+
 
     background: #eeeeee;
 
+
+
     aspect-ratio: 1 / 1;
+
+
 
     overflow: hidden;
 
+
+
     cursor: pointer;
 
+
+
     -webkit-tap-highlight-color: transparent;
+
 }
 
+
+
 .gallery-item img {
+
     display: block;
 
+
+
     width: 100%;
+
     height: 100%;
+
+
 
     object-fit: cover;
 
+
+
     pointer-events: none;
 
+
+
     transition:
+
         transform 0.3s ease;
+
 }
+
+
 
 .gallery-item:hover img {
+
     transform: scale(1.03);
+
 }
 
 
+
+
+
 /* =========================
+
    WEDDING DAY
+
 ========================= */
+
+
 
 .wedding-section {
+
     background: #f1f8fa;
+
 }
 
 
+
+
+
 /* =========================
+
    CALENDAR
+
 ========================= */
 
+
+
 .wedding-calendar {
+
     width: 100%;
+
     max-width: 360px;
+
+
 
     margin: 42px auto 38px;
 
+
+
     padding: 24px 16px 20px;
+
+
 
     border: 1px solid #c6dde3;
 
+
+
     background:
+
         rgba(255, 255, 255, 0.45);
+
 }
 
+
+
 .calendar-weekdays {
+
     display: grid;
 
+
+
     grid-template-columns:
+
         repeat(7, 1fr);
+
+
 
     padding-bottom: 13px;
 
+
+
     margin-bottom: 5px;
+
+
 
     border-bottom: 1px solid #dce6e8;
 
+
+
     text-align: center;
+
 }
 
+
+
 .calendar-weekdays span {
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         Georgia,
+
         serif;
 
-    font-size: 11px;
+
+
+    font-size: 15px;
+
+
 
     letter-spacing: 0.7px;
 
+
+
     color: #999999;
+
 }
+
+
 
 .calendar-days {
+
     display: grid;
 
+
+
     grid-template-columns:
+
         repeat(7, 1fr);
 
+
+
     text-align: center;
+
 }
 
+
+
 .calendar-days span {
+
     position: relative;
+
+
 
     display: flex;
 
+
+
     align-items: center;
+
     justify-content: center;
+
+
 
     height: 44px;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         Georgia,
+
         serif;
 
-    font-size: 13px;
+
+
+    font-size: 15px;
+
+
 
     color: #555555;
 
+
+
     border-bottom: 1px solid #f0f2f2;
+
 }
+
+
 
 .calendar-days span:nth-last-child(-n+7) {
+
     border-bottom: none;
+
 }
+
+
 
 .calendar-days .empty {
+
     color: transparent;
+
 }
+
+
 
 .calendar-days .wedding-date {
+
     color: #568b97;
 
+
+
     font-weight: 500;
+
 }
 
+
+
 .calendar-days .wedding-date::before {
+
     content: "";
+
+
 
     position: absolute;
 
+
+
     width: 30px;
+
     height: 30px;
+
+
 
     border: 1px solid #82b5c1;
 
+
+
     border-radius: 50%;
+
 }
 
+
+
 .calendar-days .wedding-date::after {
+
     content: "";
 
+
+
     position: absolute;
+
+
 
     bottom: 3px;
 
+
+
     width: 3px;
+
     height: 3px;
+
+
 
     border-radius: 50%;
 
+
+
     background: #82b5c1;
+
 }
+
+
+
 
 
 /* =========================
+
    CALENDAR EVENT
+
 ========================= */
 
+
+
 .calendar-event {
+
     margin-top: 34px;
 
+
+
     text-align: center;
+
 }
 
+
+
 .calendar-event-date {
+
     margin: 0 0 11px;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         Georgia,
+
         serif;
 
-    font-size: 13px;
+
+
+    font-size: 16px;
+
+
 
     letter-spacing: 1.4px;
 
+
+
     color: #868686;
+
 }
+
 /* =========================
+
    WEDDING TIME
+
 ========================= */
 
+
+
 .calendar-event-time {
+
     margin: 12px 0 0;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         serif;
 
-    font-size: 14px;
+
+
+    font-size: 16px;
+
     font-weight: 400;
+
+
 
     letter-spacing: 2px;
 
+
+
     color: #7899a1;
+
 }
 
+
+
 .calendar-event-time {
+
     margin: 0;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         Georgia,
+
         serif;
+
+
 
     font-size: 26px;
 
+
+
     letter-spacing: 2px;
 
+
+
     color: #444444;
+
 }
 
+
+
 .detail-divider {
+
     width: 1px;
+
     height: 30px;
+
+
 
     margin: 25px auto;
 
+
+
     background: #a9cdd5;
+
 }
 
+
+
 .venue-name {
+
     margin: 0;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         Georgia,
+
         serif;
+
+
 
     font-size: 20px;
 
+
+
     color: #58747b;
+
 }
+
+
+
 
 
 /* =========================
+
    LOCATION
+
 ========================= */
 
+
+
 .location-section {
+
     background: #f7fbfc;
+
 }
 
+
+
 .location-address {
+
     margin: 0;
+
+
 
     font-size: 18px;
 
+
+
     line-height: 2;
 
+
+
     color: #696969;
+
 }
 
+
+
 .map-button {
+
     display: inline-block;
+
+
 
     margin-top: 32px;
 
+
+
     padding: 13px 24px;
+
+
 
     border: 1px solid #9fc5ce;
 
+
+
     background:
+
         rgba(255, 255, 255, 0.5);
+
+
 
     color: #5f8d98;
 
+
+
     text-decoration: none;
 
+
+
     font-size: 16px;
+
+
 
     line-height: 1;
 
+
+
     transition:
+
         background 0.2s ease,
+
         color 0.2s ease;
+
 }
+
+
 
 .map-button:hover {
+
     background: #8fb9c3;
 
+
+
     color: #ffffff;
+
 }
+
+
+
 
 
 /* =========================
+
    RSVP
+
 ========================= */
 
+
+
 .rsvp-link-section {
+
     background: #f1f8fa;
+
 }
 
+
+
 .rsvp-link-message {
+
     margin: 0;
+
+
 
     font-size: 16px;
 
+
+
     line-height: 2;
+
+
 
     color: #6e7d80;
 
+
+
     word-break: keep-all;
+
 }
 
+
+
 .rsvp-button {
+
     display: inline-block;
+
+
 
     margin-top: 35px;
 
+
+
     min-width: 180px;
+
+
 
     padding: 15px 28px;
 
+
+
     border: 1px solid #8fb9c3;
+
+
 
     background: #8fb9c3;
 
+
+
     color: #ffffff;
+
+
 
     text-decoration: none;
 
+
+
     font-size: 15px;
+
+
 
     letter-spacing: 0.5px;
 
+
+
     transition:
+
         opacity 0.2s ease;
+
 }
 
+
+
 .rsvp-button:hover {
+
     opacity: 0.85;
+
 }
+
+
+
 
 
 /* =========================
+
    CONTACT
+
 ========================= */
 
+
+
 .contact-section {
+
     background: #f7fbfc;
+
 }
 
+
+
 .contact-grid {
+
     display: flex;
 
+
+
     align-items: stretch;
+
     justify-content: center;
+
+
 
     gap: 22px;
 
+
+
     max-width: 390px;
 
+
+
     margin: 0 auto;
+
 }
 
+
+
 .contact-card {
+
     flex: 1;
 
+
+
     display: flex;
+
+
 
     flex-direction: column;
 
+
+
     align-items: center;
 
+
+
     min-width: 0;
+
 }
 
+
+
 .contact-role {
+
     margin-bottom: 13px;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         Georgia,
+
         serif;
+
+
 
     font-size: 10px;
 
+
+
     letter-spacing: 2px;
 
+
+
     color: #86adb6;
+
 }
 
+
+
 .contact-card strong {
+
     margin-bottom: 11px;
+
+
 
     font-size: 16px;
 
+
+
     font-weight: 400;
 
+
+
     color: #454545;
+
 }
 
+
+
 .contact-card a {
+
     color: #6d858b;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         Georgia,
+
         serif;
+
+
 
     font-size: 11px;
 
+
+
     text-decoration: none;
 
+
+
     white-space: nowrap;
+
 }
+
+
 
 .contact-divider {
+
     width: 1px;
 
+
+
     background: #c9dde2;
+
 }
+
+
+
 
 
 /* =========================
+
    ACCOUNT
+
 ========================= */
 
+
+
 .account-section {
+
     background: #f7fbfc;
+
 }
 
+
+
 .account-box {
+
     margin-bottom: 12px;
+
+
 
     padding: 22px 20px;
 
+
+
     border: 1px solid #d4e5e9;
 
+
+
     background:
+
         rgba(255, 255, 255, 0.55);
 
+
+
     text-align: left;
+
 }
+
+
 
 .account-box:last-child {
+
     margin-bottom: 0;
+
 }
 
+
+
 .account-title {
+
     margin: 0 0 11px;
+
+
 
     font-size: 18px;
 
+
+
     color: #689ba7;
+
 }
 
+
+
 .account-info {
+
     margin: 0;
+
+
 
     font-size: 16px;
 
+
+
     line-height: 2;
+
+
 
     color: #666666;
 
+
+
     word-break: break-word;
+
 }
 
 
+
+
+
 /* =========================
+
    CLOSING
+
 ========================= */
 
+
+
 .closing {
+
     padding: 100px 30px;
+
+
 
     background: #f1f8fa;
 
+
+
     text-align: center;
+
 }
 
+
+
 .closing-label {
+
     margin: 0;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         Georgia,
+
         serif;
+
+
 
     font-size: 15px;
 
+
+
     letter-spacing: 4px;
 
+
+
     color: #78aebb;
+
 }
 
+
+
 .closing-message {
+
     margin: 30px 0 0;
+
+
 
     font-size: 18px;
 
+
+
     line-height: 2.1;
 
+
+
     color: #646464;
+
 }
 
+
+
 .closing-heart {
+
     margin-top: 25px;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         sans-serif;
+
+
 
     font-size: 25px;
 
+
+
     color: #82b9c6;
+
 }
 
+
+
 .closing strong {
+
     display: block;
+
+
 
     margin-top: 22px;
 
+
+
     font-size: 19px;
+
+
 
     font-weight: 400;
 
+
+
     color: #484848;
+
 }
 
 
+
+
+
 /* =========================
+
    PHOTO MODAL
+
 ========================= */
 
+
+
 .photo-modal {
+
     position: fixed;
+
+
 
     inset: 0;
 
+
+
     z-index: 999999;
+
+
 
     display: none;
 
+
+
     align-items: center;
+
     justify-content: center;
+
+
 
     padding: 20px;
 
+
+
     background:
+
         rgba(15, 15, 15, 0.94);
+
 }
+
+
 
 .photo-modal.active {
+
     display: flex;
+
 }
+
+
 
 .photo-modal img {
+
     display: block;
 
+
+
     width: auto;
+
     height: auto;
 
+
+
     max-width: 95vw;
+
     max-height: 88vh;
 
+
+
     object-fit: contain;
+
 }
 
+
+
 .close-button {
+
     position: absolute;
 
+
+
     top: 14px;
+
     right: 17px;
+
+
 
     z-index: 1000000;
 
+
+
     width: 48px;
+
     height: 48px;
+
+
 
     padding: 0;
 
+
+
     border: 0;
+
+
 
     background: transparent;
 
+
+
     color: #ffffff;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         sans-serif;
+
+
 
     font-size: 38px;
 
+
+
     font-weight: 200;
 
+
+
     cursor: pointer;
+
 }
 
 
+
+
+
 /* =========================
+
    MOBILE
+
 ========================= */
+
+
 
 @media (max-width: 480px) {
 
+
+
     .hero-header {
+
         padding:
+
             82px
+
             20px
+
             43px;
+
     }
+
+
 
     .wedding-title-box span {
+
         width: 40px;
+
         height: 40px;
 
+
+
         font-size: 19px;
+
     }
+
+
 
     .hero-names {
+
         margin-top: 27px;
 
+
+
         font-size: 18px;
+
     }
+
+
 
     .hero-photo {
+
         height: 410px;
+
     }
+
+
 
     .hero-date {
+
         min-height: 95px;
 
+
+
         padding:
+
             25px
+
             16px;
+
     }
+
+
 
     .section {
+
         padding:
+
             88px
+
             26px;
+
     }
+
+
 
     .section h2 {
+
         font-size: 22px;
+
     }
+
+
 
     .wedding-calendar {
+
         padding:
+
             21px
+
             12px
+
             17px;
+
     }
+
+
 
     .calendar-days span {
+
         height: 42px;
+
     }
+
+
 
     .contact-grid {
+
         gap: 15px;
+
     }
 
+
+
     .contact-card a {
+
         font-size: 10px;
+
     }
+
 }
 
 
+
+
+
 /* =========================
+
    DESKTOP
+
 ========================= */
+
+
 
 @media (min-width: 481px) {
 
+
+
     body {
+
         padding: 30px 0;
+
     }
+
+
 
     .invitation {
+
         box-shadow:
+
             0 8px 35px
+
             rgba(0, 0, 0, 0.06);
+
     }
+
 }
+
 /* =========================
+
    RSVP OPEN / CLOSE
+
 ========================= */
+
+
 
 .rsvp-form-wrapper {
+
     display: none;
+
     width: 100%;
+
     margin-top: 42px;
+
 }
+
+
 
 .rsvp-form-wrapper.active {
+
     display: block;
+
     animation: rsvpOpen 0.35s ease forwards;
+
 }
+
+
 
 @keyframes rsvpOpen {
+
     from {
+
         opacity: 0;
+
         transform: translateY(8px);
+
     }
+
+
 
     to {
+
         opacity: 1;
+
         transform: translateY(0);
+
     }
+
 }
+
 /* =========================
+
    RSVP FORM DESIGN
+
 ========================= */
 
+
+
 #rsvpForm {
+
     width: 100%;
+
     max-width: 380px;
+
+
 
     margin: 0 auto;
 
+
+
     padding: 30px 24px;
+
+
 
     border: 1px solid #d2e3e7;
 
+
+
     background:
+
         rgba(255, 255, 255, 0.55);
 
+
+
     text-align: left;
+
 }
+
+
+
 
 
 /* 각 항목 */
 
+
+
 .rsvp-field {
+
     margin-bottom: 26px;
+
 }
+
+
+
 
 
 /* 질문 / 라벨 */
 
+
+
 .rsvp-field > label,
+
 .rsvp-question {
+
     display: block;
+
+
 
     margin: 0 0 10px;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         serif;
 
+
+
     font-size: 13px;
+
+
 
     font-weight: 400;
 
+
+
     line-height: 1.7;
 
+
+
     color: #5e7176;
+
 }
 
+
+
 .rsvp-question {
+
     margin-bottom: 13px;
+
 }
+
+
+
 
 
 /* =========================
+
    TEXT INPUT / SELECT / TEXTAREA
+
 ========================= */
 
+
+
 .rsvp-field input[type="text"],
+
 .rsvp-field input[type="tel"],
+
 .rsvp-field select,
+
 .rsvp-field textarea {
+
     display: block;
+
+
 
     width: 100%;
 
+
+
     padding: 13px 14px;
+
+
 
     border: 1px solid #cbdfe4;
 
+
+
     border-radius: 0;
+
+
 
     outline: none;
 
+
+
     background:
+
         rgba(255, 255, 255, 0.78);
+
+
 
     color: #454545;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         serif;
+
+
 
     font-size: 13px;
 
+
+
     line-height: 1.6;
 
+
+
     appearance: none;
+
     -webkit-appearance: none;
+
 }
+
+
+
 
 
 .rsvp-field input[type="text"],
+
 .rsvp-field input[type="tel"],
+
 .rsvp-field select {
+
     height: 48px;
+
 }
+
+
+
 
 
 .rsvp-field textarea {
+
     min-height: 110px;
 
+
+
     resize: vertical;
+
 }
+
+
+
 
 
 /* 포커스 */
 
+
+
 .rsvp-field input:focus,
+
 .rsvp-field select:focus,
+
 .rsvp-field textarea:focus {
+
     border-color: #8fb9c3;
+
 }
+
+
+
 
 
 /* =========================
+
    ATTENDANCE BUTTONS
+
 ========================= */
 
+
+
 .rsvp-field:first-child {
+
     display: grid;
 
+
+
     grid-template-columns:
+
         repeat(2, 1fr);
 
+
+
     column-gap: 10px;
+
 }
+
+
+
 
 
 /* 질문은 두 칸 전체 사용 */
 
+
+
 .rsvp-field:first-child .rsvp-question {
+
     grid-column: 1 / -1;
+
 }
+
+
+
 
 
 .radio-option {
+
     position: relative;
+
+
 
     display: block;
 
+
+
     cursor: pointer;
+
 }
+
+
+
 
 
 /* 실제 radio 숨김 */
 
+
+
 .radio-option input {
+
     position: absolute;
+
+
 
     opacity: 0;
 
+
+
     pointer-events: none;
+
 }
+
+
+
 
 
 /* 참석 버튼 디자인 */
 
+
+
 .radio-option span {
+
     display: flex;
 
+
+
     align-items: center;
+
     justify-content: center;
+
+
 
     width: 100%;
 
+
+
     min-height: 48px;
+
+
 
     padding: 10px 8px;
 
+
+
     border: 1px solid #cbdfe4;
 
+
+
     background:
+
         rgba(255, 255, 255, 0.7);
+
+
 
     color: #697a7e;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         serif;
+
+
 
     font-size: 12px;
 
+
+
     line-height: 1.5;
+
+
 
     text-align: center;
 
+
+
     transition:
+
         background 0.2s ease,
+
         border-color 0.2s ease,
+
         color 0.2s ease;
+
 }
+
+
+
 
 
 /* 선택됐을 때 */
 
+
+
 .radio-option input:checked + span {
+
     border-color: #8fb9c3;
+
+
 
     background: #8fb9c3;
 
+
+
     color: #ffffff;
+
 }
 
 
+
+
+
 /* =========================
+
    SUBMIT BUTTON
+
 ========================= */
 
+
+
 .submit-rsvp {
+
     display: block;
 
+
+
     width: 100%;
+
+
 
     margin-top: 8px;
 
+
+
     padding: 15px;
+
+
 
     border: 1px solid #8fb9c3;
 
+
+
     background: #8fb9c3;
+
+
 
     color: #ffffff;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         serif;
+
+
 
     font-size: 13px;
 
+
+
     letter-spacing: 0.5px;
+
+
 
     cursor: pointer;
 
+
+
     transition:
+
         opacity 0.2s ease;
+
 }
+
+
+
 
 
 .submit-rsvp:hover {
+
     opacity: 0.88;
+
 }
+
+
+
 
 
 .submit-rsvp:disabled {
+
     opacity: 0.55;
 
+
+
     cursor: default;
+
 }
 
 
+
+
+
 /* =========================
+
    RESULT MESSAGE
+
 ========================= */
 
+
+
 .rsvp-result {
+
     display: none;
+
+
 
     margin: 24px 0 0;
 
+
+
     text-align: center;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         serif;
 
+
+
     font-size: 13px;
+
+
 
     line-height: 1.9;
 
+
+
     color: #668c95;
+
 }
 
 
+
+
+
 /* =========================
+
    MOBILE
+
 ========================= */
+
+
 
 @media (max-width: 480px) {
 
+
+
     #rsvpForm {
+
         padding: 26px 18px;
+
     }
+
+
 
     .radio-option span {
+
         font-size: 11px;
+
     }
+
 }
+
 /* =========================
+
    WEDDING COUNTDOWN
+
 ========================= */
 
+
+
 .wedding-countdown {
+
     margin: 35px 0 0;
 
-    font-family: "Hi Melody", serif;
+
+
+    font-family: "Gamja Flower", serif;
+
+
 
     font-size: 14px;
+
     font-weight: 400;
+
+
 
     line-height: 1.8;
 
+
+
     color: #66777b;
+
 }
+
+
 
 .wedding-countdown strong {
+
     margin: 0 3px;
 
-    font-family: "Hi Melody", Georgia, serif;
+
+
+    font-family: "Gamja Flower", Georgia, serif;
+
+
 
     font-size: 19px;
+
     font-weight: 500;
 
+
+
     color: #6d9eaa;
+
 }
+
 .account-note {
+
     margin: -10px auto 35px;
 
+
+
     font-size: 13px;
+
     line-height: 2;
+
+
 
     color: #78898d;
 
+
+
     word-break: keep-all;
+
 }
+
 .account-note {
+
     max-width: 390px;
+
+
 
     margin: -8px auto 38px;
 
+
+
     font-size: 13px;
+
     line-height: 2;
+
+
 
     color: #78898d;
 
+
+
     word-break: keep-all;
+
 }
+
 .calendar-event-time {
+
     margin: 16px 0 18px;
 
-    font-family: "Hi Melody", serif;
+
+
+    font-family: "Gamja Flower", serif;
+
+
 
     font-size: 13px;
+
     font-weight: 400;
 
+
+
     letter-spacing: 2px;
+
+
 
     color: #7899a1;
+
 }
 
+
+
 .calendar-event-time span {
+
     margin-left: 6px;
 
+
+
     font-family:
-        "Hi Melody",
+
+        "Gamja Flower",
+
         Georgia,
+
         serif;
 
+
+
     font-size: 25px;
+
     font-weight: 400;
+
+
 
     letter-spacing: 2px;
 
+
+
     color: #6f9da8;
+
 }
+
 /* =========================
+
    GALLERY SLIDE NAVIGATION
+
 ========================= */
 
+
+
 .photo-prev,
+
 .photo-next {
+
     position: absolute;
+
     top: 50%;
+
     transform: translateY(-50%);
+
+
 
     z-index: 1000001;
 
+
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
+
+
     width: 42px;
+
     height: 52px;
 
+
+
     border: none;
+
     background: rgba(255, 255, 255, 0.08);
 
+
+
     color: white;
+
     font-size: 27px;
 
+
+
     cursor: pointer;
+
     -webkit-tap-highlight-color: transparent;
+
 }
+
+
 
 .photo-prev {
+
     left: 8px;
+
 }
+
+
 
 .photo-next {
+
     right: 8px;
+
 }
 
+
+
 .photo-prev:hover,
+
 .photo-next:hover {
+
     background: rgba(255, 255, 255, 0.2);
+
 }
+
+
 
 /* 사진 번호 */
 
+
+
 .photo-counter {
+
     position: absolute;
+
     bottom: 25px;
+
     left: 50%;
+
     transform: translateX(-50%);
 
+
+
     color: rgba(255, 255, 255, 0.85);
-    font-family: "Hi Melody", serif;
+
+    font-family: "Gamja Flower", serif;
+
     font-size: 13px;
+
     letter-spacing: 2px;
+
 }
+
+
 
 /* 모바일 */
 
+
+
 @media (max-width: 480px) {
+
     .photo-prev,
+
     .photo-next {
+
         width: 35px;
+
         height: 45px;
+
         font-size: 22px;
+
         background: transparent;
+
     }
+
+
 
     .photo-modal img {
+
         max-width: 85vw;
+
         max-height: 80vh;
+
     }
+
 }
+
 /* ====================================
+
    HERO BACKGROUND PHOTO
+
 ==================================== */
 
+
+
 .hero {
+
     position: relative;
+
     min-height: 100svh;
 
+
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
+
     align-items: center;
 
+
+
     text-align: center;
+
     overflow: hidden;
 
+
+
     padding: 80px 20px 60px;
+
     box-sizing: border-box;
+
 }
+
+
 
 /* 배경 사진 */
 
+
+
 .hero-background {
+
     position: absolute;
+
     inset: 0;
 
+
+
     background-image: url("images/main.png");
+
     background-size: cover;
+
     background-position: center center;
+
     background-repeat: no-repeat;
 
+
+
     opacity: 0.2;
+
     pointer-events: none;
 
+
+
     z-index: 0;
+
 }
+
+
 
 /* 글씨를 사진 위에 표시 */
 
+
+
 .hero-header,
+
 .hero-date {
+
     position: relative;
+
     z-index: 1;
+
 }
+
+
 
 /* 상단 타이틀 */
 
+
+
 .hero-header {
+
     width: 100%;
+
 }
+
+
 
 /* 하단 날짜 */
 
+
+
 .hero-date {
+
     width: 100%;
+
 }
+
+
 
 /* 모바일 */
 
+
+
 @media (max-width: 600px) {
 
+
+
     .hero {
+
         min-height: 100svh;
+
         padding: 65px 20px 45px;
+
     }
+
+
 
     .hero-background {
+
         background-position: center center;
+
     }
+
 }
+
 /* HERO BACKGROUND - FINAL OVERRIDE */
 
+
+
 .hero {
+
     position: relative !important;
+
     min-height: 100svh !important;
+
     display: flex !important;
+
     flex-direction: column !important;
+
     justify-content: space-between !important;
+
     background: #f1f8fa !important;
+
 }
+
+
 
 .hero-background {
+
     position: absolute !important;
+
     inset: 0 !important;
+
     background: url("images/main.png") center center / cover no-repeat !important;
+
     opacity: 0.2 !important;
+
     z-index: 0 !important;
+
     pointer-events: none !important;
+
 }
+
+
 
 .hero-header,
+
 .hero-date {
+
     position: relative !important;
+
     z-index: 1 !important;
+
     background: transparent !important;
+
 }
+
 /* NEW FULL SCREEN WEDDING HERO */
 
+
+
 .hero {
+
     position: relative;
+
     min-height: 100svh;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
 
+
+
     background-color: #f1f8fa;
+
     isolation: isolate;
+
 }
+
+
 
 /* 사진만 20% 투명도 적용 */
+
 .hero::before {
+
     content: "";
+
     position: absolute;
+
     inset: 0;
 
+
+
     background-image: url("images/main.png");
+
     background-size: cover;
+
     background-position: center center;
+
     background-repeat: no-repeat;
 
+
+
     opacity: 0.5;
+
     z-index: -1;
+
     pointer-events: none;
+
 }
+
+
 
 /* 기존 하늘색 배경 제거 */
+
 .hero .hero-header,
+
 .hero .hero-date {
+
     position: relative;
+
     z-index: 1;
+
     background: transparent;
+
 }
+
+
 
 /* 상단 결혼합니다 */
+
 .hero .hero-header {
+
     padding: 100px 20px 40px;
+
 }
+
+
 
 /* 하단 결혼식 날짜 */
+
 .hero .hero-date {
+
     padding: 30px 20px 60px;
+
 }
+
+
 
 @media (max-width: 600px) {
+
     .hero {
+
         min-height: 100svh;
+
     }
+
+
 
     .hero .hero-header {
+
         padding-top: 90px;
+
     }
+
+
 
     .hero .hero-date {
+
         padding-bottom: 55px;
+
     }
+
 }
+
 /* 결혼합니다 박스 강조 */
 
+
+
 .wedding-title-box {
+
     border-top: 1.5px solid #6099a8;
+
     border-bottom: 1.5px solid #6099a8;
 
+
+
     background: rgba(255, 255, 255, 0.55);
+
 }
 
+
+
 .wedding-title-box span {
+
     width: 43px;
+
     height: 45px;
+
+
 
     border-left: 1.5px solid #80aebb;
 
+
+
     font-size: 21px;
+
     font-weight: 500;
+
     color: #354b52;
+
 }
+
+
 
 .wedding-title-box span:last-child {
+
     border-right: 1.5px solid #80aebb;
+
 }
+
 /* 결혼 날짜 및 시간 */
 
+
+
 .hero .hero-date {
+
     gap: 16px;
+
     padding: 30px 15px 55px;
+
 }
+
+
 
 .hero-date p {
+
     font-size: 18px;
+
     font-weight: 600;
+
     letter-spacing: 0.5px;
+
     color: #344a51;
+
 }
 
+
+
 .hero-date span {
+
     width: 1.5px;
+
     height: 20px;
+
     background: #75a8b5;
+
 }
+
+
 
 /* 모바일 화면 */
 
+
+
 @media (max-width: 480px) {
+
     .hero-date p {
+
         font-size: 16px;
+
     }
+
+
 
     .hero .hero-date {
+
         gap: 12px;
+
     }
-}
-.hero-names {
-    font-size: 21px;
-    font-weight: 500;
-    color: #344a51;
+
 }
 
+.hero-names {
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    color: #344a51;
+
+}
+
+
+
 .hero-heart {
+
     color: #659eac;
+
+}
+
+/* ==========================================
+   GAMJA FLOWER — TYPOGRAPHY FINAL OVERRIDES
+   기존 배경/사진/레이아웃은 유지
+========================================== */
+body, button, input, select, textarea {
+    font-family: "Gamja Flower", cursive;
+}
+.wedding-title-box span { font-size: 25px; font-weight: 400; }
+.hero-names { font-size: 24px; font-weight: 400; }
+.hero-date p { font-size: 21px; font-weight: 400; }
+.section-label { font-size: 18px; letter-spacing: 2px; }
+.section h2 { font-size: 29px; }
+.message { font-size: 23px; line-height: 1.9; }
+.family-name { font-size: 19px; }
+.note-message { font-size: 19px; line-height: 1.9; }
+.calendar-weekdays span, .calendar-days span { font-size: 21px; }
+.calendar-event-date { font-size: 20px; }
+.calendar-event-time { font-size: 20px; }
+.calendar-event-time span { font-size: 28px; }
+.venue-name { font-size: 25px; }
+.location-address { font-size: 21px; }
+.map-button { font-size: 20px; }
+.rsvp-link-message { font-size: 20px; }
+.rsvp-button { font-size: 22px; }
+.contact-role { font-size: 16px; letter-spacing: 1px; }
+.contact-card strong { font-size: 21px; }
+.contact-card a { font-size: 16px; }
+.account-title { font-size: 23px; }
+.account-info { font-size: 20px; }
+.account-note { font-size: 18px; }
+.closing-label { font-size: 19px; }
+.closing-message { font-size: 22px; }
+.closing strong { font-size: 23px; }
+.rsvp-field > label, .rsvp-question { font-size: 19px; }
+.rsvp-field input[type="text"], .rsvp-field input[type="tel"],
+.rsvp-field select, .rsvp-field textarea { font-size: 19px; }
+.radio-option span { font-size: 19px; }
+.submit-rsvp { font-size: 22px; }
+.rsvp-result { font-size: 19px; }
+.wedding-countdown { font-size: 19px; }
+.wedding-countdown strong { font-size: 25px; }
+.photo-counter { font-size: 18px; }
+@media (max-width: 480px) {
+    .wedding-title-box span { font-size: 23px; }
+    .hero-names { font-size: 22px; }
+    .hero-date p { font-size: 18px; }
+    .section h2 { font-size: 27px; }
+    .message { font-size: 21px; }
+    .calendar-weekdays span, .calendar-days span { font-size: 19px; }
+    .contact-card a { font-size: 15px; }
+    .radio-option span { font-size: 18px; }
 }

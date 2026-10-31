@@ -118,7 +118,7 @@ button {
     border-left: 1px solid #afd2da;
 
     font-family:
-        "Hi Melody",
+        "Gaegu",
         serif;
 
     font-size: 19px;
@@ -190,7 +190,7 @@ button {
     margin: 0;
 
     font-family:
-        "Hi Melodyy",
+        "Gowun Dodum",
         Georgia,
         serif;
 
@@ -269,7 +269,7 @@ button {
 .message {
     margin: 0;
 
-    font-size: 15px;
+    font-size: 18px;
 
     line-height: 2.25;
 
@@ -295,7 +295,7 @@ button {
         "Hi Melody",
         sans-serif;
 
-    font-size: 21px;
+    font-size: 24px;
 
     color: #82b9c6;
 }

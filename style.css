@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Nanum+Myeongjo:wght@400;700&family=Playfair+Display:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Gaegu&family=Gamja+Flower&family=Hi+Melody&display=swap');
 
 
 /* =========================
@@ -21,7 +22,7 @@ body {
     color: #383838;
 
     font-family:
-        "Nanum Myeongjo",
+        "Hi Melody",
         serif;
 }
 
@@ -117,7 +118,7 @@ button {
     border-left: 1px solid #afd2da;
 
     font-family:
-        "Nanum Myeongjo",
+        "Hi Melody",
         serif;
 
     font-size: 19px;
@@ -140,7 +141,7 @@ button {
     margin: 27px 0 0;
 
     font-family:
-        "Nanum Myeongjo",
+        "Hi Melody",
         serif;
 
     font-size: 18px;
@@ -189,7 +190,7 @@ button {
     margin: 0;
 
     font-family:
-        "Playfair Display",
+        "Hi Melodyy",
         Georgia,
         serif;
 
@@ -222,7 +223,7 @@ button {
     margin: 0;
 
     font-family:
-        "Playfair Display",
+        "Hi Melody",
         Georgia,
         serif;
 
@@ -291,7 +292,7 @@ button {
     margin-top: 38px;
 
     font-family:
-        Arial,
+        "Hi Melody",
         sans-serif;
 
     font-size: 21px;
@@ -428,7 +429,7 @@ button {
 
 .calendar-weekdays span {
     font-family:
-        "Playfair Display",
+        "Hi Melody",
         Georgia,
         serif;
 
@@ -459,7 +460,7 @@ button {
     height: 44px;
 
     font-family:
-        "Playfair Display",
+        "Hi Melody",
         Georgia,
         serif;
 
@@ -527,7 +528,7 @@ button {
     margin: 0 0 11px;
 
     font-family:
-        "Playfair Display",
+        "Hi Melody",
         Georgia,
         serif;
 
@@ -545,7 +546,7 @@ button {
     margin: 12px 0 0;
 
     font-family:
-        "Nanum Myeongjo",
+        "Hi Melody",
         serif;
 
     font-size: 14px;
@@ -560,7 +561,7 @@ button {
     margin: 0;
 
     font-family:
-        "Playfair Display",
+        "Hi Melody",
         Georgia,
         serif;
 
@@ -584,7 +585,7 @@ button {
     margin: 0;
 
     font-family:
-        "Playfair Display",
+        "Hi Melody",
         Georgia,
         serif;
 
@@ -731,7 +732,7 @@ button {
     margin-bottom: 13px;
 
     font-family:
-        "Playfair Display",
+        "Hi Melody",
         Georgia,
         serif;
 
@@ -756,7 +757,7 @@ button {
     color: #6d858b;
 
     font-family:
-        "Playfair Display",
+        "Hi Melody",
         Georgia,
         serif;
 
@@ -836,7 +837,7 @@ button {
     margin: 0;
 
     font-family:
-        "Playfair Display",
+        "Hi Melody",
         Georgia,
         serif;
 
@@ -861,7 +862,7 @@ button {
     margin-top: 25px;
 
     font-family:
-        Arial,
+        "Hi Melody",
         sans-serif;
 
     font-size: 20px;
@@ -940,7 +941,7 @@ button {
     color: #ffffff;
 
     font-family:
-        Arial,
+        "Hi Melody",
         sans-serif;
 
     font-size: 38px;
@@ -1099,7 +1100,7 @@ button {
     margin: 0 0 10px;
 
     font-family:
-        "Nanum Myeongjo",
+        "Hi Melody",
         serif;
 
     font-size: 13px;
@@ -1142,7 +1143,7 @@ button {
     color: #454545;
 
     font-family:
-        "Nanum Myeongjo",
+        "Hi Melody",
         serif;
 
     font-size: 13px;
@@ -1240,7 +1241,7 @@ button {
     color: #697a7e;
 
     font-family:
-        "Nanum Myeongjo",
+        "Hi Melody",
         serif;
 
     font-size: 12px;
@@ -1287,7 +1288,7 @@ button {
     color: #ffffff;
 
     font-family:
-        "Nanum Myeongjo",
+        "Hi Melody",
         serif;
 
     font-size: 13px;
@@ -1325,7 +1326,7 @@ button {
     text-align: center;
 
     font-family:
-        "Nanum Myeongjo",
+        "Hi Melody",
         serif;
 
     font-size: 13px;
@@ -1357,7 +1358,7 @@ button {
 .wedding-countdown {
     margin: 35px 0 0;
 
-    font-family: "Nanum Myeongjo", serif;
+    font-family: "Hi Melody", serif;
 
     font-size: 14px;
     font-weight: 400;
@@ -1370,7 +1371,7 @@ button {
 .wedding-countdown strong {
     margin: 0 3px;
 
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Hi Melody", Georgia, serif;
 
     font-size: 19px;
     font-weight: 500;
@@ -1402,7 +1403,7 @@ button {
 .calendar-event-time {
     margin: 16px 0 18px;
 
-    font-family: "Nanum Myeongjo", serif;
+    font-family: "Hi Melody", serif;
 
     font-size: 13px;
     font-weight: 400;
@@ -1416,7 +1417,7 @@ button {
     margin-left: 6px;
 
     font-family:
-        "Cormorant Garamond",
+        "Hi Melody",
         Georgia,
         serif;
 
@@ -1478,7 +1479,7 @@ button {
     transform: translateX(-50%);
 
     color: rgba(255, 255, 255, 0.85);
-    font-family: "Playfair Display", serif;
+    font-family: "Hi Melody", serif;
     font-size: 13px;
     letter-spacing: 2px;
 }
